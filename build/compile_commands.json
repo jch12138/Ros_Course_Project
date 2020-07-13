@@ -50,6 +50,11 @@
   "file": "/home/chenway/Documents/test/src/ros_test/src/listener.cpp"
 },
 {
+  "directory": "/home/chenway/Documents/test/build/axif_tf",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"axif_tf\\\" -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3  -g   -o CMakeFiles/getmarker.dir/src/getmarker.cpp.o -c /home/chenway/Documents/test/src/axif_tf/src/getmarker.cpp",
+  "file": "/home/chenway/Documents/test/src/axif_tf/src/getmarker.cpp"
+},
+{
   "directory": "/home/chenway/Documents/test/build/usb_cam",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"usb_cam\\\" -I/home/chenway/Documents/test/src/usb_cam/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/x86_64-linux-gnu  -g   -o CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o -c /home/chenway/Documents/test/src/usb_cam/nodes/usb_cam_node.cpp",
   "file": "/home/chenway/Documents/test/src/usb_cam/nodes/usb_cam_node.cpp"

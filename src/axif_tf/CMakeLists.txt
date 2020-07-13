@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   image_transport
   message_generation
-  opencvtest
+  # opencvtest
   roscpp
   sensor_msgs
   std_msgs
@@ -111,7 +111,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
  INCLUDE_DIRS include
  LIBRARIES axif_tf
- CATKIN_DEPENDS cv_bridge geometry_msgs image_transport message_generation opencvtest roscpp sensor_msgs std_msgs tf message_runtime
+ CATKIN_DEPENDS cv_bridge geometry_msgs image_transport message_generation  roscpp sensor_msgs std_msgs tf message_runtime #opencvtest
  DEPENDS system_lib
 )
 
@@ -214,8 +214,8 @@ find_package(OpenCV)
 include_directories(${OpenCV_INCLUDE_DIRS})
 find_package(Eigen3 REQUIRED)
 include_directories(
-${EIGEN3_INCLUDE_DIR}
-${EIGEN3_LIBRARIES}
+  ${EIGEN3_INCLUDE_DIR}
+  ${EIGEN3_LIBRARIES}
 )
-add_executable(getmarker src/ getmarker.cpp)
+add_executable(getmarker src/getmarker.cpp)
 target_link_libraries(getmarker ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})

@@ -7,4 +7,5 @@
 subdirs(gtest)
 subdirs(opencvtest)
 subdirs(ros_test)
+subdirs(axif_tf)
 subdirs(usb_cam)

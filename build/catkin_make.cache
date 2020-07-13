@@ -1,2 +1,2 @@
-opencvtest:ros_test:usb_cam
+axif_tf:opencvtest:ros_test:usb_cam
 -DCATKIN_DEVEL_PREFIX=/home/chenway/Documents/test/devel -DCMAKE_INSTALL_PREFIX=/home/chenway/Documents/test/install -G Unix Makefiles

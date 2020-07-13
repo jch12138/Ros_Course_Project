@@ -128,6 +128,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/chenway/Documents/test/build/gtest/cmake_install.cmake")
   include("/home/chenway/Documents/test/build/opencvtest/cmake_install.cmake")
   include("/home/chenway/Documents/test/build/ros_test/cmake_install.cmake")
+  include("/home/chenway/Documents/test/build/axif_tf/cmake_install.cmake")
   include("/home/chenway/Documents/test/build/usb_cam/cmake_install.cmake")
 
 endif()

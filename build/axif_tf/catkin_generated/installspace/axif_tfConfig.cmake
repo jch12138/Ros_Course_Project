@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(axif_tf_EXPORTED_TARGETS "")
+set(axif_tf_EXPORTED_TARGETS "axif_tf_generate_messages_cpp;axif_tf_generate_messages_eus;axif_tf_generate_messages_lisp;axif_tf_generate_messages_nodejs;axif_tf_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${axif_tf_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   list(APPEND axif_tf_EXPORTED_TARGETS ${${axif_tf_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "axif_tf-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${axif_tf_DIR}/${extra})

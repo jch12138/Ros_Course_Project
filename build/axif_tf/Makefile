@@ -66,17 +66,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -88,6 +77,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -98,6 +98,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -121,17 +132,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -164,6 +164,96 @@ preinstall/fast:
 depend:
 	cd /home/chenway/Documents/test/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+axif_tf/CMakeFiles/getmarker.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/getmarker.dir/rule
+.PHONY : axif_tf/CMakeFiles/getmarker.dir/rule
+
+# Convenience name for target.
+getmarker: axif_tf/CMakeFiles/getmarker.dir/rule
+
+.PHONY : getmarker
+
+# fast build rule for target.
+getmarker/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/getmarker.dir/build.make axif_tf/CMakeFiles/getmarker.dir/build
+.PHONY : getmarker/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_genpy.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_genpy.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_genpy.dir/rule
+
+# Convenience name for target.
+axif_tf_genpy: axif_tf/CMakeFiles/axif_tf_genpy.dir/rule
+
+.PHONY : axif_tf_genpy
+
+# fast build rule for target.
+axif_tf_genpy/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_genpy.dir/build.make axif_tf/CMakeFiles/axif_tf_genpy.dir/build
+.PHONY : axif_tf_genpy/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+axif_tf_generate_messages_py: axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/rule
+
+.PHONY : axif_tf_generate_messages_py
+
+# fast build rule for target.
+axif_tf_generate_messages_py/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/build
+.PHONY : axif_tf_generate_messages_py/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+axif_tf_generate_messages_nodejs: axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/rule
+
+.PHONY : axif_tf_generate_messages_nodejs
+
+# fast build rule for target.
+axif_tf_generate_messages_nodejs/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/build
+.PHONY : axif_tf_generate_messages_nodejs/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+axif_tf_generate_messages_lisp: axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/rule
+
+.PHONY : axif_tf_generate_messages_lisp
+
+# fast build rule for target.
+axif_tf_generate_messages_lisp/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/build
+.PHONY : axif_tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_geneus.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_geneus.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_geneus.dir/rule
+
+# Convenience name for target.
+axif_tf_geneus: axif_tf/CMakeFiles/axif_tf_geneus.dir/rule
+
+.PHONY : axif_tf_geneus
+
+# fast build rule for target.
+axif_tf_geneus/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_geneus.dir/build.make axif_tf/CMakeFiles/axif_tf_geneus.dir/build
+.PHONY : axif_tf_geneus/fast
 
 # Convenience name for target.
 axif_tf/CMakeFiles/actionlib_generate_messages_py.dir/rule:
@@ -241,6 +331,21 @@ actionlib_generate_messages_lisp/fast:
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+axif_tf_generate_messages_eus: axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/rule
+
+.PHONY : axif_tf_generate_messages_eus
+
+# fast build rule for target.
+axif_tf_generate_messages_eus/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/build
+.PHONY : axif_tf_generate_messages_eus/fast
+
+# Convenience name for target.
 axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
@@ -254,21 +359,6 @@ tf2_msgs_generate_messages_cpp: axif_tf/CMakeFiles/tf2_msgs_generate_messages_cp
 tf2_msgs_generate_messages_cpp/fast:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-axif_tf/CMakeFiles/getmarker.dir/rule:
-	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/getmarker.dir/rule
-.PHONY : axif_tf/CMakeFiles/getmarker.dir/rule
-
-# Convenience name for target.
-getmarker: axif_tf/CMakeFiles/getmarker.dir/rule
-
-.PHONY : getmarker
-
-# fast build rule for target.
-getmarker/fast:
-	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/getmarker.dir/build.make axif_tf/CMakeFiles/getmarker.dir/build
-.PHONY : getmarker/fast
 
 # Convenience name for target.
 axif_tf/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
@@ -301,6 +391,66 @@ tf_generate_messages_cpp/fast:
 .PHONY : tf_generate_messages_cpp/fast
 
 # Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+axif_tf_generate_messages_cpp: axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/rule
+
+.PHONY : axif_tf_generate_messages_cpp
+
+# fast build rule for target.
+axif_tf_generate_messages_cpp/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/build
+.PHONY : axif_tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_generate_messages.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_generate_messages.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_generate_messages.dir/rule
+
+# Convenience name for target.
+axif_tf_generate_messages: axif_tf/CMakeFiles/axif_tf_generate_messages.dir/rule
+
+.PHONY : axif_tf_generate_messages
+
+# fast build rule for target.
+axif_tf_generate_messages/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages.dir/build
+.PHONY : axif_tf_generate_messages/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/TFcamtorobot.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/TFcamtorobot.dir/rule
+.PHONY : axif_tf/CMakeFiles/TFcamtorobot.dir/rule
+
+# Convenience name for target.
+TFcamtorobot: axif_tf/CMakeFiles/TFcamtorobot.dir/rule
+
+.PHONY : TFcamtorobot
+
+# fast build rule for target.
+TFcamtorobot/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/TFcamtorobot.dir/build.make axif_tf/CMakeFiles/TFcamtorobot.dir/build
+.PHONY : TFcamtorobot/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_gennodejs.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_gennodejs.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_gennodejs.dir/rule
+
+# Convenience name for target.
+axif_tf_gennodejs: axif_tf/CMakeFiles/axif_tf_gennodejs.dir/rule
+
+.PHONY : axif_tf_gennodejs
+
+# fast build rule for target.
+axif_tf_gennodejs/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_gennodejs.dir/build.make axif_tf/CMakeFiles/axif_tf_gennodejs.dir/build
+.PHONY : axif_tf_gennodejs/fast
+
+# Convenience name for target.
 axif_tf/CMakeFiles/tf_generate_messages_eus.dir/rule:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/tf_generate_messages_eus.dir/rule
 .PHONY : axif_tf/CMakeFiles/tf_generate_messages_eus.dir/rule
@@ -331,6 +481,21 @@ actionlib_msgs_generate_messages_cpp/fast:
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/rule
+.PHONY : axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/rule
+
+# Convenience name for target.
+_axif_tf_generate_messages_check_deps_getPoint: axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/rule
+
+.PHONY : _axif_tf_generate_messages_check_deps_getPoint
+
+# fast build rule for target.
+_axif_tf_generate_messages_check_deps_getPoint/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/build.make axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/build
+.PHONY : _axif_tf_generate_messages_check_deps_getPoint/fast
+
+# Convenience name for target.
 axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
@@ -344,6 +509,21 @@ tf_generate_messages_nodejs: axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/
 tf_generate_messages_nodejs/fast:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build.make axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_gencpp.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_gencpp.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_gencpp.dir/rule
+
+# Convenience name for target.
+axif_tf_gencpp: axif_tf/CMakeFiles/axif_tf_gencpp.dir/rule
+
+.PHONY : axif_tf_gencpp
+
+# fast build rule for target.
+axif_tf_gencpp/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_gencpp.dir/build.make axif_tf/CMakeFiles/axif_tf_gencpp.dir/build
+.PHONY : axif_tf_gencpp/fast
 
 # Convenience name for target.
 axif_tf/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
@@ -391,6 +571,21 @@ actionlib_msgs_generate_messages_nodejs/fast:
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+axif_tf/CMakeFiles/axif_tf_genlisp.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/axif_tf_genlisp.dir/rule
+.PHONY : axif_tf/CMakeFiles/axif_tf_genlisp.dir/rule
+
+# Convenience name for target.
+axif_tf_genlisp: axif_tf/CMakeFiles/axif_tf_genlisp.dir/rule
+
+.PHONY : axif_tf_genlisp
+
+# fast build rule for target.
+axif_tf_genlisp/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/axif_tf_genlisp.dir/build.make axif_tf/CMakeFiles/axif_tf_genlisp.dir/build
+.PHONY : axif_tf_genlisp/fast
+
+# Convenience name for target.
 axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
@@ -404,6 +599,21 @@ actionlib_msgs_generate_messages_py: axif_tf/CMakeFiles/actionlib_msgs_generate_
 actionlib_msgs_generate_messages_py/fast:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+axif_tf/CMakeFiles/transform_base.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 axif_tf/CMakeFiles/transform_base.dir/rule
+.PHONY : axif_tf/CMakeFiles/transform_base.dir/rule
+
+# Convenience name for target.
+transform_base: axif_tf/CMakeFiles/transform_base.dir/rule
+
+.PHONY : transform_base
+
+# fast build rule for target.
+transform_base/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/transform_base.dir/build.make axif_tf/CMakeFiles/transform_base.dir/build
+.PHONY : transform_base/fast
 
 # Convenience name for target.
 axif_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
@@ -480,6 +690,33 @@ tf2_msgs_generate_messages_py/fast:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make axif_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
+src/TFcamtorobot.o: src/TFcamtorobot.cpp.o
+
+.PHONY : src/TFcamtorobot.o
+
+# target to build an object file
+src/TFcamtorobot.cpp.o:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/TFcamtorobot.dir/build.make axif_tf/CMakeFiles/TFcamtorobot.dir/src/TFcamtorobot.cpp.o
+.PHONY : src/TFcamtorobot.cpp.o
+
+src/TFcamtorobot.i: src/TFcamtorobot.cpp.i
+
+.PHONY : src/TFcamtorobot.i
+
+# target to preprocess a source file
+src/TFcamtorobot.cpp.i:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/TFcamtorobot.dir/build.make axif_tf/CMakeFiles/TFcamtorobot.dir/src/TFcamtorobot.cpp.i
+.PHONY : src/TFcamtorobot.cpp.i
+
+src/TFcamtorobot.s: src/TFcamtorobot.cpp.s
+
+.PHONY : src/TFcamtorobot.s
+
+# target to generate assembly for a file
+src/TFcamtorobot.cpp.s:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/TFcamtorobot.dir/build.make axif_tf/CMakeFiles/TFcamtorobot.dir/src/TFcamtorobot.cpp.s
+.PHONY : src/TFcamtorobot.cpp.s
+
 src/getmarker.o: src/getmarker.cpp.o
 
 .PHONY : src/getmarker.o
@@ -507,6 +744,33 @@ src/getmarker.cpp.s:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/getmarker.dir/build.make axif_tf/CMakeFiles/getmarker.dir/src/getmarker.cpp.s
 .PHONY : src/getmarker.cpp.s
 
+src/transform_base.o: src/transform_base.cpp.o
+
+.PHONY : src/transform_base.o
+
+# target to build an object file
+src/transform_base.cpp.o:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/transform_base.dir/build.make axif_tf/CMakeFiles/transform_base.dir/src/transform_base.cpp.o
+.PHONY : src/transform_base.cpp.o
+
+src/transform_base.i: src/transform_base.cpp.i
+
+.PHONY : src/transform_base.i
+
+# target to preprocess a source file
+src/transform_base.cpp.i:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/transform_base.dir/build.make axif_tf/CMakeFiles/transform_base.dir/src/transform_base.cpp.i
+.PHONY : src/transform_base.cpp.i
+
+src/transform_base.s: src/transform_base.cpp.s
+
+.PHONY : src/transform_base.s
+
+# target to generate assembly for a file
+src/transform_base.cpp.s:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f axif_tf/CMakeFiles/transform_base.dir/build.make axif_tf/CMakeFiles/transform_base.dir/src/transform_base.cpp.s
+.PHONY : src/transform_base.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -514,25 +778,40 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... test"
 	@echo "... install/local"
+	@echo "... getmarker"
+	@echo "... axif_tf_genpy"
+	@echo "... axif_tf_generate_messages_py"
+	@echo "... install/strip"
+	@echo "... axif_tf_generate_messages_nodejs"
+	@echo "... axif_tf_generate_messages_lisp"
+	@echo "... axif_tf_geneus"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... axif_tf_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... getmarker"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... tf_generate_messages_cpp"
+	@echo "... axif_tf_generate_messages_cpp"
+	@echo "... axif_tf_generate_messages"
+	@echo "... TFcamtorobot"
+	@echo "... axif_tf_gennodejs"
 	@echo "... tf_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... _axif_tf_generate_messages_check_deps_getPoint"
 	@echo "... tf_generate_messages_nodejs"
+	@echo "... axif_tf_gencpp"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... axif_tf_genlisp"
 	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... transform_base"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... edit_cache"
 	@echo "... tf_generate_messages_lisp"
@@ -540,10 +819,15 @@ help:
 	@echo "... install"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... install/strip"
+	@echo "... src/TFcamtorobot.o"
+	@echo "... src/TFcamtorobot.i"
+	@echo "... src/TFcamtorobot.s"
 	@echo "... src/getmarker.o"
 	@echo "... src/getmarker.i"
 	@echo "... src/getmarker.s"
+	@echo "... src/transform_base.o"
+	@echo "... src/transform_base.i"
+	@echo "... src/transform_base.s"
 .PHONY : help
 
 

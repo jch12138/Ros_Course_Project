@@ -283,134 +283,199 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named sorting
+# Target rules for targets named _dobot_generate_messages_check_deps_SetHOMEParams
 
 # Build rule for target.
-sorting: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sorting
-.PHONY : sorting
+_dobot_generate_messages_check_deps_SetHOMEParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetHOMEParams
+.PHONY : _dobot_generate_messages_check_deps_SetHOMEParams
 
 # fast build rule for target.
-sorting/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/sorting.dir/build.make opencvtest/CMakeFiles/sorting.dir/build
-.PHONY : sorting/fast
+_dobot_generate_messages_check_deps_SetHOMEParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMEParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMEParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetHOMEParams/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_genpy
+# Target rules for targets named _dobot_generate_messages_check_deps_SetQueuedCmdStopExec
 
 # Build rule for target.
-opencvtest_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_genpy
-.PHONY : opencvtest_genpy
+_dobot_generate_messages_check_deps_SetQueuedCmdStopExec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetQueuedCmdStopExec
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStopExec
 
 # fast build rule for target.
-opencvtest_genpy/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_genpy.dir/build.make opencvtest/CMakeFiles/opencvtest_genpy.dir/build
-.PHONY : opencvtest_genpy/fast
+_dobot_generate_messages_check_deps_SetQueuedCmdStopExec/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStopExec.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStopExec.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStopExec/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_generate_messages_nodejs
+# Target rules for targets named _dobot_generate_messages_check_deps_SetDeviceName
 
 # Build rule for target.
-opencvtest_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_nodejs
-.PHONY : opencvtest_generate_messages_nodejs
+_dobot_generate_messages_check_deps_SetDeviceName: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetDeviceName
+.PHONY : _dobot_generate_messages_check_deps_SetDeviceName
 
 # fast build rule for target.
-opencvtest_generate_messages_nodejs/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_nodejs.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_nodejs.dir/build
-.PHONY : opencvtest_generate_messages_nodejs/fast
+_dobot_generate_messages_check_deps_SetDeviceName/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetDeviceName/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_genlisp
+# Target rules for targets named _dobot_generate_messages_check_deps_GetIODO
 
 # Build rule for target.
-opencvtest_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_genlisp
-.PHONY : opencvtest_genlisp
+_dobot_generate_messages_check_deps_GetIODO: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetIODO
+.PHONY : _dobot_generate_messages_check_deps_GetIODO
 
 # fast build rule for target.
-opencvtest_genlisp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_genlisp.dir/build.make opencvtest/CMakeFiles/opencvtest_genlisp.dir/build
-.PHONY : opencvtest_genlisp/fast
+_dobot_generate_messages_check_deps_GetIODO/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIODO/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_generate_messages_eus
+# Target rules for targets named _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup
 
 # Build rule for target.
-opencvtest_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_eus
-.PHONY : opencvtest_generate_messages_eus
+_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup
 
 # fast build rule for target.
-opencvtest_generate_messages_eus/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_eus.dir/build
-.PHONY : opencvtest_generate_messages_eus/fast
+_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_gencpp
+# Target rules for targets named _dobot_generate_messages_check_deps_SetCmdTimeout
 
 # Build rule for target.
-opencvtest_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_gencpp
-.PHONY : opencvtest_gencpp
+_dobot_generate_messages_check_deps_SetCmdTimeout: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetCmdTimeout
+.PHONY : _dobot_generate_messages_check_deps_SetCmdTimeout
 
 # fast build rule for target.
-opencvtest_gencpp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_gencpp.dir/build.make opencvtest/CMakeFiles/opencvtest_gencpp.dir/build
-.PHONY : opencvtest_gencpp/fast
+_dobot_generate_messages_check_deps_SetCmdTimeout/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetCmdTimeout/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_generate_messages_cpp
+# Target rules for targets named _dobot_generate_messages_check_deps_SetIOPWM
 
 # Build rule for target.
-opencvtest_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_cpp
-.PHONY : opencvtest_generate_messages_cpp
+_dobot_generate_messages_check_deps_SetIOPWM: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetIOPWM
+.PHONY : _dobot_generate_messages_check_deps_SetIOPWM
 
 # fast build rule for target.
-opencvtest_generate_messages_cpp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_cpp.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_cpp.dir/build
-.PHONY : opencvtest_generate_messages_cpp/fast
+_dobot_generate_messages_check_deps_SetIOPWM/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIOPWM.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIOPWM.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetIOPWM/fast
 
 #=============================================================================
-# Target rules for targets named _opencvtest_generate_messages_check_deps_pixel_point0
+# Target rules for targets named _dobot_generate_messages_check_deps_SetEMotor
 
 # Build rule for target.
-_opencvtest_generate_messages_check_deps_pixel_point0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _opencvtest_generate_messages_check_deps_pixel_point0
-.PHONY : _opencvtest_generate_messages_check_deps_pixel_point0
+_dobot_generate_messages_check_deps_SetEMotor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetEMotor
+.PHONY : _dobot_generate_messages_check_deps_SetEMotor
 
 # fast build rule for target.
-_opencvtest_generate_messages_check_deps_pixel_point0/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/_opencvtest_generate_messages_check_deps_pixel_point0.dir/build.make opencvtest/CMakeFiles/_opencvtest_generate_messages_check_deps_pixel_point0.dir/build
-.PHONY : _opencvtest_generate_messages_check_deps_pixel_point0/fast
+_dobot_generate_messages_check_deps_SetEMotor/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEMotor/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
+# Target rules for targets named _dobot_generate_messages_check_deps_GetPose
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
-.PHONY : rosgraph_msgs_generate_messages_nodejs
+_dobot_generate_messages_check_deps_GetPose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetPose
+.PHONY : _dobot_generate_messages_check_deps_GetPose
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+_dobot_generate_messages_check_deps_GetPose/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPose/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_nodejs
+# Target rules for targets named _dobot_generate_messages_check_deps_SetEndEffectorParams
 
 # Build rule for target.
-geometry_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
-.PHONY : geometry_msgs_generate_messages_nodejs
+_dobot_generate_messages_check_deps_SetEndEffectorParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetEndEffectorParams
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorParams
 
 # fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make opencvtest/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
+_dobot_generate_messages_check_deps_SetEndEffectorParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetDeviceName
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceName: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetDeviceName
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceName
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceName/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceName.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceName.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceName/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetEndEffectorGripper
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorGripper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetEndEffectorGripper
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorGripper
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorGripper/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorGripper/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetJOGCommonParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCommonParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetJOGCommonParams
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCommonParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCommonParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetIODI
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetIODI: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetIODI
+.PHONY : _dobot_generate_messages_check_deps_GetIODI
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIODI/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIODI/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetJOGJointParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetJOGJointParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetJOGJointParams
+.PHONY : _dobot_generate_messages_check_deps_GetJOGJointParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetJOGJointParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetJOGJointParams/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
@@ -422,34 +487,138 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/std_msgs_generate_messages_py.dir/build.make opencvtest/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_gennodejs
+# Target rules for targets named _dobot_generate_messages_check_deps_GetPTPCommonParams
 
 # Build rule for target.
-opencvtest_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_gennodejs
-.PHONY : opencvtest_gennodejs
+_dobot_generate_messages_check_deps_GetPTPCommonParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetPTPCommonParams
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCommonParams
 
 # fast build rule for target.
-opencvtest_gennodejs/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_gennodejs.dir/build.make opencvtest/CMakeFiles/opencvtest_gennodejs.dir/build
-.PHONY : opencvtest_gennodejs/fast
+_dobot_generate_messages_check_deps_GetPTPCommonParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCommonParams/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_eus
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
 
 # Build rule for target.
-geometry_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
-.PHONY : geometry_msgs_generate_messages_eus
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
 
 # fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetEndEffectorLaser
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorLaser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetEndEffectorLaser
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorLaser
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorLaser/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorLaser/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetIOPWM
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetIOPWM: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetIOPWM
+.PHONY : _dobot_generate_messages_check_deps_GetIOPWM
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIOPWM/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIOPWM/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetHOMECmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetHOMECmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetHOMECmd
+.PHONY : _dobot_generate_messages_check_deps_SetHOMECmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetHOMECmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMECmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMECmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetHOMECmd/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetPTPJumpParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetPTPJumpParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetPTPJumpParams
+.PHONY : _dobot_generate_messages_check_deps_GetPTPJumpParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetPTPJumpParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJumpParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJumpParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPJumpParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetJOGCoordinateParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetJOGCoordinateParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetJOGCoordinateParams
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCoordinateParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetJOGCoordinateParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCoordinateParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetCPParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetCPParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetCPParams
+.PHONY : _dobot_generate_messages_check_deps_GetCPParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetCPParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetCPParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetCPParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetCPParams/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetDeviceSN
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceSN: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetDeviceSN
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceSN
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceSN/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceSN/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -461,8 +630,216 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make opencvtest/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_ClearAllAlarmsState
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_ClearAllAlarmsState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_ClearAllAlarmsState
+.PHONY : _dobot_generate_messages_check_deps_ClearAllAlarmsState
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_ClearAllAlarmsState/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/build
+.PHONY : _dobot_generate_messages_check_deps_ClearAllAlarmsState/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetCPCmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetCPCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetCPCmd
+.PHONY : _dobot_generate_messages_check_deps_SetCPCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetCPCmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetCPCmd/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetARCCmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetARCCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetARCCmd
+.PHONY : _dobot_generate_messages_check_deps_SetARCCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetARCCmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetARCCmd/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetARCParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetARCParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetARCParams
+.PHONY : _dobot_generate_messages_check_deps_GetARCParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetARCParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetARCParams/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetJOGJointParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetJOGJointParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetJOGJointParams
+.PHONY : _dobot_generate_messages_check_deps_SetJOGJointParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetJOGJointParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGJointParams/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_py.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetEndEffectorGripper
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetEndEffectorGripper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetEndEffectorGripper
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorGripper
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetEndEffectorGripper/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorGripper/fast
+
+#=============================================================================
+# Target rules for targets named dobot_generate_messages
+
+# Build rule for target.
+dobot_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages
+.PHONY : dobot_generate_messages
+
+# fast build rule for target.
+dobot_generate_messages/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages.dir/build.make dobot/CMakeFiles/dobot_generate_messages.dir/build
+.PHONY : dobot_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetHOMEParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetHOMEParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetHOMEParams
+.PHONY : _dobot_generate_messages_check_deps_GetHOMEParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetHOMEParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetHOMEParams/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_py
@@ -474,8 +851,671 @@ geometry_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make opencvtest/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	$(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetWAITCmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetWAITCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetWAITCmd
+.PHONY : _dobot_generate_messages_check_deps_SetWAITCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetWAITCmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetWAITCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetWAITCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetWAITCmd/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetJOGCoordinateParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCoordinateParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetJOGCoordinateParams
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCoordinateParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCoordinateParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCoordinateParams/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_eus.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetInfraredSensor
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetInfraredSensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetInfraredSensor
+.PHONY : _dobot_generate_messages_check_deps_SetInfraredSensor
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetInfraredSensor/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetInfraredSensor/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetPTPCoordinateParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCoordinateParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetPTPCoordinateParams
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCoordinateParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCoordinateParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCoordinateParams/fast
+
+#=============================================================================
+# Target rules for targets named dobot_genpy
+
+# Build rule for target.
+dobot_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_genpy
+.PHONY : dobot_genpy
+
+# fast build rule for target.
+dobot_genpy/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_genpy.dir/build.make dobot/CMakeFiles/dobot_genpy.dir/build
+.PHONY : dobot_genpy/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetPTPCoordinateParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetPTPCoordinateParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetPTPCoordinateParams
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCoordinateParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetPTPCoordinateParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCoordinateParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetCPParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetCPParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetCPParams
+.PHONY : _dobot_generate_messages_check_deps_SetCPParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetCPParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetCPParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetQueuedCmdClear
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdClear: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetQueuedCmdClear
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdClear
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdClear/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdClear.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdClear.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdClear/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetColorSensor
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetColorSensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetColorSensor
+.PHONY : _dobot_generate_messages_check_deps_GetColorSensor
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetColorSensor/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetColorSensor/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetPTPJointParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetPTPJointParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetPTPJointParams
+.PHONY : _dobot_generate_messages_check_deps_GetPTPJointParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetPTPJointParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPJointParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetPTPCmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetPTPCmd
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCmd/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetIOMultiplexing
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetIOMultiplexing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetIOMultiplexing
+.PHONY : _dobot_generate_messages_check_deps_GetIOMultiplexing
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIOMultiplexing/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIOMultiplexing/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetIOMultiplexing
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetIOMultiplexing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetIOMultiplexing
+.PHONY : _dobot_generate_messages_check_deps_SetIOMultiplexing
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetIOMultiplexing/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIOMultiplexing.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIOMultiplexing.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetIOMultiplexing/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetPTPJumpParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetPTPJumpParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetPTPJumpParams
+.PHONY : _dobot_generate_messages_check_deps_SetPTPJumpParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPJumpParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJumpParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJumpParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPJumpParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetEndEffectorParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetEndEffectorParams
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetPTPCommonParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCommonParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetPTPCommonParams
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCommonParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCommonParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetARCParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetARCParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetARCParams
+.PHONY : _dobot_generate_messages_check_deps_SetARCParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetARCParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetARCParams/fast
+
+#=============================================================================
+# Target rules for targets named dobot_generate_messages_py
+
+# Build rule for target.
+dobot_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_py
+.PHONY : dobot_generate_messages_py
+
+# fast build rule for target.
+dobot_generate_messages_py/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
+.PHONY : dobot_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named gohome
+
+# Build rule for target.
+gohome: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gohome
+.PHONY : gohome
+
+# fast build rule for target.
+gohome/fast:
+	$(MAKE) -f dobot/CMakeFiles/gohome.dir/build.make dobot/CMakeFiles/gohome.dir/build
+.PHONY : gohome/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetJOGCmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetJOGCmd
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCmd/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetTRIGCmd
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetTRIGCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetTRIGCmd
+.PHONY : _dobot_generate_messages_check_deps_SetTRIGCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetTRIGCmd/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetTRIGCmd/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetDeviceVersion
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceVersion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetDeviceVersion
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceVersion
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceVersion/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceVersion.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceVersion.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceVersion/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetPTPJointParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetPTPJointParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetPTPJointParams
+.PHONY : _dobot_generate_messages_check_deps_SetPTPJointParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPJointParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPJointParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetJOGCommonParams
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetJOGCommonParams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetJOGCommonParams
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetJOGCommonParams/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCommonParams/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetEndEffectorLaser
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetEndEffectorLaser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetEndEffectorLaser
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorLaser
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetEndEffectorLaser/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorLaser/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetColorSensor
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetColorSensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetColorSensor
+.PHONY : _dobot_generate_messages_check_deps_SetColorSensor
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetColorSensor/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetColorSensor/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetQueuedCmdStartExec
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdStartExec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetQueuedCmdStartExec
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStartExec
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdStartExec/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStartExec/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_SetIODO
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_SetIODO: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_SetIODO
+.PHONY : _dobot_generate_messages_check_deps_SetIODO
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetIODO/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetIODO/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetInfraredSensor
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetInfraredSensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetInfraredSensor
+.PHONY : _dobot_generate_messages_check_deps_GetInfraredSensor
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetInfraredSensor/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetInfraredSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetInfraredSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetInfraredSensor/fast
+
+#=============================================================================
+# Target rules for targets named DobotClient_JOG
+
+# Build rule for target.
+DobotClient_JOG: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DobotClient_JOG
+.PHONY : DobotClient_JOG
+
+# fast build rule for target.
+DobotClient_JOG/fast:
+	$(MAKE) -f dobot/CMakeFiles/DobotClient_JOG.dir/build.make dobot/CMakeFiles/DobotClient_JOG.dir/build
+.PHONY : DobotClient_JOG/fast
+
+#=============================================================================
+# Target rules for targets named dobot_generate_messages_cpp
+
+# Build rule for target.
+dobot_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_cpp
+.PHONY : dobot_generate_messages_cpp
+
+# fast build rule for target.
+dobot_generate_messages_cpp/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
+.PHONY : dobot_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dobot_gencpp
+
+# Build rule for target.
+dobot_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_gencpp
+.PHONY : dobot_gencpp
+
+# fast build rule for target.
+dobot_gencpp/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_gencpp.dir/build.make dobot/CMakeFiles/dobot_gencpp.dir/build
+.PHONY : dobot_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named dobot_generate_messages_eus
+
+# Build rule for target.
+dobot_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_eus
+.PHONY : dobot_generate_messages_eus
+
+# fast build rule for target.
+dobot_generate_messages_eus/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
+.PHONY : dobot_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named dobot_geneus
+
+# Build rule for target.
+dobot_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_geneus
+.PHONY : dobot_geneus
+
+# fast build rule for target.
+dobot_geneus/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_geneus.dir/build.make dobot/CMakeFiles/dobot_geneus.dir/build
+.PHONY : dobot_geneus/fast
+
+#=============================================================================
+# Target rules for targets named dobot_generate_messages_lisp
+
+# Build rule for target.
+dobot_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_lisp
+.PHONY : dobot_generate_messages_lisp
+
+# fast build rule for target.
+dobot_generate_messages_lisp/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
+.PHONY : dobot_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetAlarmsState
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetAlarmsState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetAlarmsState
+.PHONY : _dobot_generate_messages_check_deps_GetAlarmsState
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetAlarmsState/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetAlarmsState/fast
+
+#=============================================================================
+# Target rules for targets named dobot_genlisp
+
+# Build rule for target.
+dobot_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_genlisp
+.PHONY : dobot_genlisp
+
+# fast build rule for target.
+dobot_genlisp/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_genlisp.dir/build.make dobot/CMakeFiles/dobot_genlisp.dir/build
+.PHONY : dobot_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named _dobot_generate_messages_check_deps_GetIOADC
+
+# Build rule for target.
+_dobot_generate_messages_check_deps_GetIOADC: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _dobot_generate_messages_check_deps_GetIOADC
+.PHONY : _dobot_generate_messages_check_deps_GetIOADC
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIOADC/fast:
+	$(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIOADC/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named dobot_generate_messages_nodejs
+
+# Build rule for target.
+dobot_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_generate_messages_nodejs
+.PHONY : dobot_generate_messages_nodejs
+
+# fast build rule for target.
+dobot_generate_messages_nodejs/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build
+.PHONY : dobot_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named dobot_gennodejs
+
+# Build rule for target.
+dobot_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobot_gennodejs
+.PHONY : dobot_gennodejs
+
+# fast build rule for target.
+dobot_gennodejs/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobot_gennodejs.dir/build.make dobot/CMakeFiles/dobot_gennodejs.dir/build
+.PHONY : dobot_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named DobotServer
+
+# Build rule for target.
+DobotServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DobotServer
+.PHONY : DobotServer
+
+# fast build rule for target.
+DobotServer/fast:
+	$(MAKE) -f dobot/CMakeFiles/DobotServer.dir/build.make dobot/CMakeFiles/DobotServer.dir/build
+.PHONY : DobotServer/fast
+
+#=============================================================================
+# Target rules for targets named DobotClient_PTP
+
+# Build rule for target.
+DobotClient_PTP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DobotClient_PTP
+.PHONY : DobotClient_PTP
+
+# fast build rule for target.
+DobotClient_PTP/fast:
+	$(MAKE) -f dobot/CMakeFiles/DobotClient_PTP.dir/build.make dobot/CMakeFiles/DobotClient_PTP.dir/build
+.PHONY : DobotClient_PTP/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
@@ -491,30 +1531,17 @@ sensor_msgs_generate_messages_cpp/fast:
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_generate_messages_py
+# Target rules for targets named opencvtest_gencpp
 
 # Build rule for target.
-opencvtest_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_py
-.PHONY : opencvtest_generate_messages_py
+opencvtest_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_gencpp
+.PHONY : opencvtest_gencpp
 
 # fast build rule for target.
-opencvtest_generate_messages_py/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_py.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_py.dir/build
-.PHONY : opencvtest_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make opencvtest/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
+opencvtest_gencpp/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_gencpp.dir/build.make opencvtest/CMakeFiles/opencvtest_gencpp.dir/build
+.PHONY : opencvtest_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_py
@@ -530,32 +1557,6 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make opencvtest/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -567,19 +1568,6 @@ sensor_msgs_generate_messages_eus: cmake_check_build_system
 sensor_msgs_generate_messages_eus/fast:
 	$(MAKE) -f opencvtest/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
-
-# Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make opencvtest/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_nodejs
@@ -595,30 +1583,17 @@ sensor_msgs_generate_messages_nodejs/fast:
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
+# Target rules for targets named _opencvtest_generate_messages_check_deps_pixel_point0
 
 # Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
+_opencvtest_generate_messages_check_deps_pixel_point0: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _opencvtest_generate_messages_check_deps_pixel_point0
+.PHONY : _opencvtest_generate_messages_check_deps_pixel_point0
 
 # fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/roscpp_generate_messages_py.dir/build.make opencvtest/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
+_opencvtest_generate_messages_check_deps_pixel_point0/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/_opencvtest_generate_messages_check_deps_pixel_point0.dir/build.make opencvtest/CMakeFiles/_opencvtest_generate_messages_check_deps_pixel_point0.dir/build
+.PHONY : _opencvtest_generate_messages_check_deps_pixel_point0/fast
 
 #=============================================================================
 # Target rules for targets named opencvtest_geneus
@@ -634,69 +1609,17 @@ opencvtest_geneus/fast:
 .PHONY : opencvtest_geneus/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_lisp
+# Target rules for targets named opencvtest_generate_messages
 
 # Build rule for target.
-geometry_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
-.PHONY : geometry_msgs_generate_messages_lisp
+opencvtest_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages
+.PHONY : opencvtest_generate_messages
 
 # fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make opencvtest/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make opencvtest/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make opencvtest/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make opencvtest/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
+opencvtest_generate_messages/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages.dir/build
+.PHONY : opencvtest_generate_messages/fast
 
 #=============================================================================
 # Target rules for targets named opencvtest_generate_messages_lisp
@@ -712,69 +1635,121 @@ opencvtest_generate_messages_lisp/fast:
 .PHONY : opencvtest_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named opencvtest_generate_messages
+# Target rules for targets named opencvtest_generate_messages_eus
 
 # Build rule for target.
-opencvtest_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages
-.PHONY : opencvtest_generate_messages
+opencvtest_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_eus
+.PHONY : opencvtest_generate_messages_eus
 
 # fast build rule for target.
-opencvtest_generate_messages/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages.dir/build
-.PHONY : opencvtest_generate_messages/fast
+opencvtest_generate_messages_eus/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_eus.dir/build
+.PHONY : opencvtest_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_eus
+# Target rules for targets named opencvtest_genlisp
 
 # Build rule for target.
-roscpp_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
-.PHONY : roscpp_generate_messages_eus
+opencvtest_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_genlisp
+.PHONY : opencvtest_genlisp
 
 # fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/roscpp_generate_messages_eus.dir/build.make opencvtest/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
+opencvtest_genlisp/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_genlisp.dir/build.make opencvtest/CMakeFiles/opencvtest_genlisp.dir/build
+.PHONY : opencvtest_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
+# Target rules for targets named opencvtest_gennodejs
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
+opencvtest_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_gennodejs
+.PHONY : opencvtest_gennodejs
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+opencvtest_gennodejs/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_gennodejs.dir/build.make opencvtest/CMakeFiles/opencvtest_gennodejs.dir/build
+.PHONY : opencvtest_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+# Target rules for targets named opencvtest_generate_messages_nodejs
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
+opencvtest_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_nodejs
+.PHONY : opencvtest_generate_messages_nodejs
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make opencvtest/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+opencvtest_generate_messages_nodejs/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_nodejs.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_nodejs.dir/build
+.PHONY : opencvtest_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
+# Target rules for targets named sensor_msgs_generate_messages_lisp
 
 # Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f opencvtest/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make opencvtest/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make opencvtest/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named opencvtest_generate_messages_py
+
+# Build rule for target.
+opencvtest_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_py
+.PHONY : opencvtest_generate_messages_py
+
+# fast build rule for target.
+opencvtest_generate_messages_py/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_py.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_py.dir/build
+.PHONY : opencvtest_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named opencvtest_genpy
+
+# Build rule for target.
+opencvtest_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_genpy
+.PHONY : opencvtest_genpy
+
+# fast build rule for target.
+opencvtest_genpy/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_genpy.dir/build.make opencvtest/CMakeFiles/opencvtest_genpy.dir/build
+.PHONY : opencvtest_genpy/fast
+
+#=============================================================================
+# Target rules for targets named sorting
+
+# Build rule for target.
+sorting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sorting
+.PHONY : sorting
+
+# fast build rule for target.
+sorting/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/sorting.dir/build.make opencvtest/CMakeFiles/sorting.dir/build
+.PHONY : sorting/fast
+
+#=============================================================================
+# Target rules for targets named opencvtest_generate_messages_cpp
+
+# Build rule for target.
+opencvtest_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvtest_generate_messages_cpp
+.PHONY : opencvtest_generate_messages_cpp
+
+# fast build rule for target.
+opencvtest_generate_messages_cpp/fast:
+	$(MAKE) -f opencvtest/CMakeFiles/opencvtest_generate_messages_cpp.dir/build.make opencvtest/CMakeFiles/opencvtest_generate_messages_cpp.dir/build
+.PHONY : opencvtest_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named talker
@@ -959,6 +1934,84 @@ ros_test_gennodejs/fast:
 .PHONY : ros_test_gennodejs/fast
 
 #=============================================================================
+# Target rules for targets named getmarker
+
+# Build rule for target.
+getmarker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 getmarker
+.PHONY : getmarker
+
+# fast build rule for target.
+getmarker/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/getmarker.dir/build.make axif_tf/CMakeFiles/getmarker.dir/build
+.PHONY : getmarker/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_genpy
+
+# Build rule for target.
+axif_tf_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_genpy
+.PHONY : axif_tf_genpy
+
+# fast build rule for target.
+axif_tf_genpy/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_genpy.dir/build.make axif_tf/CMakeFiles/axif_tf_genpy.dir/build
+.PHONY : axif_tf_genpy/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_generate_messages_py
+
+# Build rule for target.
+axif_tf_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_generate_messages_py
+.PHONY : axif_tf_generate_messages_py
+
+# fast build rule for target.
+axif_tf_generate_messages_py/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_py.dir/build
+.PHONY : axif_tf_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_generate_messages_nodejs
+
+# Build rule for target.
+axif_tf_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_generate_messages_nodejs
+.PHONY : axif_tf_generate_messages_nodejs
+
+# fast build rule for target.
+axif_tf_generate_messages_nodejs/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_nodejs.dir/build
+.PHONY : axif_tf_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_generate_messages_lisp
+
+# Build rule for target.
+axif_tf_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_generate_messages_lisp
+.PHONY : axif_tf_generate_messages_lisp
+
+# fast build rule for target.
+axif_tf_generate_messages_lisp/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_lisp.dir/build
+.PHONY : axif_tf_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_geneus
+
+# Build rule for target.
+axif_tf_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_geneus
+.PHONY : axif_tf_geneus
+
+# fast build rule for target.
+axif_tf_geneus/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_geneus.dir/build.make axif_tf/CMakeFiles/axif_tf_geneus.dir/build
+.PHONY : axif_tf_geneus/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_py
 
 # Build rule for target.
@@ -1024,6 +2077,19 @@ actionlib_generate_messages_lisp/fast:
 .PHONY : actionlib_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named axif_tf_generate_messages_eus
+
+# Build rule for target.
+axif_tf_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_generate_messages_eus
+.PHONY : axif_tf_generate_messages_eus
+
+# fast build rule for target.
+axif_tf_generate_messages_eus/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_eus.dir/build
+.PHONY : axif_tf_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1035,19 +2101,6 @@ tf2_msgs_generate_messages_cpp: cmake_check_build_system
 tf2_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make axif_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named getmarker
-
-# Build rule for target.
-getmarker: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 getmarker
-.PHONY : getmarker
-
-# fast build rule for target.
-getmarker/fast:
-	$(MAKE) -f axif_tf/CMakeFiles/getmarker.dir/build.make axif_tf/CMakeFiles/getmarker.dir/build
-.PHONY : getmarker/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_generate_messages_eus
@@ -1076,6 +2129,58 @@ tf_generate_messages_cpp/fast:
 .PHONY : tf_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named axif_tf_generate_messages_cpp
+
+# Build rule for target.
+axif_tf_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_generate_messages_cpp
+.PHONY : axif_tf_generate_messages_cpp
+
+# fast build rule for target.
+axif_tf_generate_messages_cpp/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages_cpp.dir/build
+.PHONY : axif_tf_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_generate_messages
+
+# Build rule for target.
+axif_tf_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_generate_messages
+.PHONY : axif_tf_generate_messages
+
+# fast build rule for target.
+axif_tf_generate_messages/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_generate_messages.dir/build.make axif_tf/CMakeFiles/axif_tf_generate_messages.dir/build
+.PHONY : axif_tf_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named TFcamtorobot
+
+# Build rule for target.
+TFcamtorobot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TFcamtorobot
+.PHONY : TFcamtorobot
+
+# fast build rule for target.
+TFcamtorobot/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/TFcamtorobot.dir/build.make axif_tf/CMakeFiles/TFcamtorobot.dir/build
+.PHONY : TFcamtorobot/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_gennodejs
+
+# Build rule for target.
+axif_tf_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_gennodejs
+.PHONY : axif_tf_gennodejs
+
+# fast build rule for target.
+axif_tf_gennodejs/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_gennodejs.dir/build.make axif_tf/CMakeFiles/axif_tf_gennodejs.dir/build
+.PHONY : axif_tf_gennodejs/fast
+
+#=============================================================================
 # Target rules for targets named tf_generate_messages_eus
 
 # Build rule for target.
@@ -1102,6 +2207,19 @@ actionlib_msgs_generate_messages_cpp/fast:
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named _axif_tf_generate_messages_check_deps_getPoint
+
+# Build rule for target.
+_axif_tf_generate_messages_check_deps_getPoint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _axif_tf_generate_messages_check_deps_getPoint
+.PHONY : _axif_tf_generate_messages_check_deps_getPoint
+
+# fast build rule for target.
+_axif_tf_generate_messages_check_deps_getPoint/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/build.make axif_tf/CMakeFiles/_axif_tf_generate_messages_check_deps_getPoint.dir/build
+.PHONY : _axif_tf_generate_messages_check_deps_getPoint/fast
+
+#=============================================================================
 # Target rules for targets named tf_generate_messages_nodejs
 
 # Build rule for target.
@@ -1113,6 +2231,19 @@ tf_generate_messages_nodejs: cmake_check_build_system
 tf_generate_messages_nodejs/fast:
 	$(MAKE) -f axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build.make axif_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named axif_tf_gencpp
+
+# Build rule for target.
+axif_tf_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_gencpp
+.PHONY : axif_tf_gencpp
+
+# fast build rule for target.
+axif_tf_gencpp/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_gencpp.dir/build.make axif_tf/CMakeFiles/axif_tf_gencpp.dir/build
+.PHONY : axif_tf_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_eus
@@ -1154,6 +2285,19 @@ actionlib_msgs_generate_messages_nodejs/fast:
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named axif_tf_genlisp
+
+# Build rule for target.
+axif_tf_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 axif_tf_genlisp
+.PHONY : axif_tf_genlisp
+
+# fast build rule for target.
+axif_tf_genlisp/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/axif_tf_genlisp.dir/build.make axif_tf/CMakeFiles/axif_tf_genlisp.dir/build
+.PHONY : axif_tf_genlisp/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1165,6 +2309,19 @@ actionlib_msgs_generate_messages_py: cmake_check_build_system
 actionlib_msgs_generate_messages_py/fast:
 	$(MAKE) -f axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make axif_tf/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named transform_base
+
+# Build rule for target.
+transform_base: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 transform_base
+.PHONY : transform_base
+
+# fast build rule for target.
+transform_base/fast:
+	$(MAKE) -f axif_tf/CMakeFiles/transform_base.dir/build.make axif_tf/CMakeFiles/transform_base.dir/build
+.PHONY : transform_base/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_lisp
@@ -1344,44 +2501,119 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... sorting"
-	@echo "... opencvtest_genpy"
-	@echo "... opencvtest_generate_messages_nodejs"
-	@echo "... opencvtest_genlisp"
-	@echo "... opencvtest_generate_messages_eus"
-	@echo "... opencvtest_gencpp"
-	@echo "... opencvtest_generate_messages_cpp"
-	@echo "... _opencvtest_generate_messages_check_deps_pixel_point0"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... _dobot_generate_messages_check_deps_SetHOMEParams"
+	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdStopExec"
+	@echo "... _dobot_generate_messages_check_deps_SetDeviceName"
+	@echo "... _dobot_generate_messages_check_deps_GetIODO"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup"
+	@echo "... _dobot_generate_messages_check_deps_SetCmdTimeout"
+	@echo "... _dobot_generate_messages_check_deps_SetIOPWM"
+	@echo "... _dobot_generate_messages_check_deps_SetEMotor"
+	@echo "... _dobot_generate_messages_check_deps_GetPose"
+	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorParams"
+	@echo "... _dobot_generate_messages_check_deps_GetDeviceName"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorGripper"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGCommonParams"
+	@echo "... _dobot_generate_messages_check_deps_GetIODI"
+	@echo "... _dobot_generate_messages_check_deps_GetJOGJointParams"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... opencvtest_gennodejs"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... opencvtest_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_py"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPCommonParams"
 	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... opencvtest_geneus"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... opencvtest_generate_messages_lisp"
-	@echo "... opencvtest_generate_messages"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorLaser"
+	@echo "... _dobot_generate_messages_check_deps_GetIOPWM"
+	@echo "... _dobot_generate_messages_check_deps_SetHOMECmd"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPJumpParams"
+	@echo "... _dobot_generate_messages_check_deps_GetJOGCoordinateParams"
+	@echo "... _dobot_generate_messages_check_deps_GetCPParams"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... _dobot_generate_messages_check_deps_GetDeviceSN"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... _dobot_generate_messages_check_deps_ClearAllAlarmsState"
+	@echo "... _dobot_generate_messages_check_deps_SetCPCmd"
+	@echo "... _dobot_generate_messages_check_deps_SetARCCmd"
+	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... _dobot_generate_messages_check_deps_GetARCParams"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGJointParams"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorGripper"
+	@echo "... dobot_generate_messages"
+	@echo "... _dobot_generate_messages_check_deps_GetHOMEParams"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... _dobot_generate_messages_check_deps_SetWAITCmd"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGCoordinateParams"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... _dobot_generate_messages_check_deps_SetInfraredSensor"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPCoordinateParams"
+	@echo "... dobot_genpy"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPCoordinateParams"
+	@echo "... _dobot_generate_messages_check_deps_SetCPParams"
+	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdClear"
+	@echo "... _dobot_generate_messages_check_deps_GetColorSensor"
+	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPJointParams"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPCmd"
+	@echo "... _dobot_generate_messages_check_deps_GetIOMultiplexing"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... _dobot_generate_messages_check_deps_SetIOMultiplexing"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPJumpParams"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorParams"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPCommonParams"
+	@echo "... _dobot_generate_messages_check_deps_SetARCParams"
+	@echo "... dobot_generate_messages_py"
+	@echo "... gohome"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGCmd"
+	@echo "... _dobot_generate_messages_check_deps_SetTRIGCmd"
+	@echo "... _dobot_generate_messages_check_deps_GetDeviceVersion"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPJointParams"
+	@echo "... _dobot_generate_messages_check_deps_GetJOGCommonParams"
+	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorLaser"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... _dobot_generate_messages_check_deps_SetColorSensor"
+	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup"
+	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdStartExec"
+	@echo "... _dobot_generate_messages_check_deps_SetIODO"
+	@echo "... _dobot_generate_messages_check_deps_GetInfraredSensor"
+	@echo "... DobotClient_JOG"
+	@echo "... dobot_generate_messages_cpp"
+	@echo "... dobot_gencpp"
+	@echo "... dobot_generate_messages_eus"
+	@echo "... dobot_geneus"
+	@echo "... dobot_generate_messages_lisp"
+	@echo "... _dobot_generate_messages_check_deps_GetAlarmsState"
+	@echo "... dobot_genlisp"
+	@echo "... _dobot_generate_messages_check_deps_GetIOADC"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... dobot_generate_messages_nodejs"
+	@echo "... dobot_gennodejs"
+	@echo "... DobotServer"
+	@echo "... DobotClient_PTP"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... opencvtest_gencpp"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... _opencvtest_generate_messages_check_deps_pixel_point0"
+	@echo "... opencvtest_geneus"
+	@echo "... opencvtest_generate_messages"
+	@echo "... opencvtest_generate_messages_lisp"
+	@echo "... opencvtest_generate_messages_eus"
+	@echo "... opencvtest_genlisp"
+	@echo "... opencvtest_gennodejs"
+	@echo "... opencvtest_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... opencvtest_generate_messages_py"
+	@echo "... opencvtest_genpy"
+	@echo "... sorting"
+	@echo "... opencvtest_generate_messages_cpp"
 	@echo "... talker"
 	@echo "... listener"
 	@echo "... ros_test_genpy"
@@ -1396,22 +2628,36 @@ help:
 	@echo "... ros_test_generate_messages_eus"
 	@echo "... ros_test_generate_messages_nodejs"
 	@echo "... ros_test_gennodejs"
+	@echo "... getmarker"
+	@echo "... axif_tf_genpy"
+	@echo "... axif_tf_generate_messages_py"
+	@echo "... axif_tf_generate_messages_nodejs"
+	@echo "... axif_tf_generate_messages_lisp"
+	@echo "... axif_tf_geneus"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... axif_tf_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... getmarker"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... tf_generate_messages_cpp"
+	@echo "... axif_tf_generate_messages_cpp"
+	@echo "... axif_tf_generate_messages"
+	@echo "... TFcamtorobot"
+	@echo "... axif_tf_gennodejs"
 	@echo "... tf_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... _axif_tf_generate_messages_check_deps_getPoint"
 	@echo "... tf_generate_messages_nodejs"
+	@echo "... axif_tf_gencpp"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... axif_tf_genlisp"
 	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... transform_base"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"

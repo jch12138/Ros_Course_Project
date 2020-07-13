@@ -52,12 +52,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
-## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+# Generate messages in the 'msg' folder
+add_message_files(
+  FILES
+  getPoint.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -73,11 +72,11 @@ find_package(catkin REQUIRED COMPONENTS
 #   Action2.action
 # )
 
-## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   sensor_msgs#   std_msgs
-# )
+# Generate added messages and services with any dependencies listed here
+generate_messages(
+  DEPENDENCIES
+  std_msgs#   sensor_msgs#   std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -219,3 +218,7 @@ include_directories(
 )
 add_executable(getmarker src/getmarker.cpp)
 target_link_libraries(getmarker ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_executable(TFcamtorobot src/TFcamtorobot.cpp)
+target_link_libraries(TFcamtorobot ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_executable(transform_base src/transform_base.cpp)
+target_link_libraries(transform_base ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})

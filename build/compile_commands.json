@@ -35,6 +35,26 @@
   "file": "/usr/src/gtest/src/gtest_main.cc"
 },
 {
+  "directory": "/home/chenway/Documents/test/build/dobot",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"dobot\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/chenway/Documents/test/src/dobot/src/DobotDll_x64  -g   -o CMakeFiles/gohome.dir/src/gohome.cpp.o -c /home/chenway/Documents/test/src/dobot/src/gohome.cpp",
+  "file": "/home/chenway/Documents/test/src/dobot/src/gohome.cpp"
+},
+{
+  "directory": "/home/chenway/Documents/test/build/dobot",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"dobot\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/chenway/Documents/test/src/dobot/src/DobotDll_x64  -g   -o CMakeFiles/DobotClient_JOG.dir/src/DobotClient_JOG.cpp.o -c /home/chenway/Documents/test/src/dobot/src/DobotClient_JOG.cpp",
+  "file": "/home/chenway/Documents/test/src/dobot/src/DobotClient_JOG.cpp"
+},
+{
+  "directory": "/home/chenway/Documents/test/build/dobot",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"dobot\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/chenway/Documents/test/src/dobot/src/DobotDll_x64  -g   -o CMakeFiles/DobotServer.dir/src/DobotServer.cpp.o -c /home/chenway/Documents/test/src/dobot/src/DobotServer.cpp",
+  "file": "/home/chenway/Documents/test/src/dobot/src/DobotServer.cpp"
+},
+{
+  "directory": "/home/chenway/Documents/test/build/dobot",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"dobot\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/chenway/Documents/test/src/dobot/src/DobotDll_x64  -g   -o CMakeFiles/DobotClient_PTP.dir/src/DobotClient_PTP.cpp.o -c /home/chenway/Documents/test/src/dobot/src/DobotClient_PTP.cpp",
+  "file": "/home/chenway/Documents/test/src/dobot/src/DobotClient_PTP.cpp"
+},
+{
   "directory": "/home/chenway/Documents/test/build/opencvtest",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"opencvtest\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -std=c++11 -o CMakeFiles/sorting.dir/src/sorting.cpp.o -c /home/chenway/Documents/test/src/opencvtest/src/sorting.cpp",
   "file": "/home/chenway/Documents/test/src/opencvtest/src/sorting.cpp"
@@ -51,8 +71,18 @@
 },
 {
   "directory": "/home/chenway/Documents/test/build/axif_tf",
-  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"axif_tf\\\" -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3  -g   -o CMakeFiles/getmarker.dir/src/getmarker.cpp.o -c /home/chenway/Documents/test/src/axif_tf/src/getmarker.cpp",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"axif_tf\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3  -g   -o CMakeFiles/getmarker.dir/src/getmarker.cpp.o -c /home/chenway/Documents/test/src/axif_tf/src/getmarker.cpp",
   "file": "/home/chenway/Documents/test/src/axif_tf/src/getmarker.cpp"
+},
+{
+  "directory": "/home/chenway/Documents/test/build/axif_tf",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"axif_tf\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3  -g   -o CMakeFiles/TFcamtorobot.dir/src/TFcamtorobot.cpp.o -c /home/chenway/Documents/test/src/axif_tf/src/TFcamtorobot.cpp",
+  "file": "/home/chenway/Documents/test/src/axif_tf/src/TFcamtorobot.cpp"
+},
+{
+  "directory": "/home/chenway/Documents/test/build/axif_tf",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"axif_tf\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3  -g   -o CMakeFiles/transform_base.dir/src/transform_base.cpp.o -c /home/chenway/Documents/test/src/axif_tf/src/transform_base.cpp",
+  "file": "/home/chenway/Documents/test/src/axif_tf/src/transform_base.cpp"
 },
 {
   "directory": "/home/chenway/Documents/test/build/usb_cam",

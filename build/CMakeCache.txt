@@ -304,6 +304,12 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
 
+//Value Computed by CMake
+dobot_BINARY_DIR:STATIC=/home/chenway/Documents/test/build/dobot
+
+//Value Computed by CMake
+dobot_SOURCE_DIR:STATIC=/home/chenway/Documents/test/src/dobot
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 
@@ -565,7 +571,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

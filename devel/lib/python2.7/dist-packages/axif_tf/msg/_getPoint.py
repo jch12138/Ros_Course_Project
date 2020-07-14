@@ -7,15 +7,15 @@ import struct
 
 
 class getPoint(genpy.Message):
-  _md5sum = "4416512988bf8bb5f533b3277759fe81"
+  _md5sum = "fe1886e8d1150193eacc1fadec6d92ff"
   _type = "axif_tf/getPoint"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """float32[] x1
+  _full_text = """int8      color
+float32[] x1
 float32[] x2
-float32[] x3
-"""
-  __slots__ = ['x1','x2','x3']
-  _slot_types = ['float32[]','float32[]','float32[]']
+float32[] x3"""
+  __slots__ = ['color','x1','x2','x3']
+  _slot_types = ['int8','float32[]','float32[]','float32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +25,7 @@ float32[] x3
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x1,x2,x3
+       color,x1,x2,x3
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -34,6 +34,8 @@ float32[] x3
     if args or kwds:
       super(getPoint, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
+      if self.color is None:
+        self.color = 0
       if self.x1 is None:
         self.x1 = []
       if self.x2 is None:
@@ -41,6 +43,7 @@ float32[] x3
       if self.x3 is None:
         self.x3 = []
     else:
+      self.color = 0
       self.x1 = []
       self.x2 = []
       self.x3 = []
@@ -57,6 +60,7 @@ float32[] x3
     :param buff: buffer, ``StringIO``
     """
     try:
+      buff.write(_get_struct_b().pack(self.color))
       length = len(self.x1)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
@@ -79,6 +83,9 @@ float32[] x3
     """
     try:
       end = 0
+      start = end
+      end += 1
+      (self.color,) = _get_struct_b().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -112,6 +119,7 @@ float32[] x3
     :param numpy: numpy python module
     """
     try:
+      buff.write(_get_struct_b().pack(self.color))
       length = len(self.x1)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
@@ -135,6 +143,9 @@ float32[] x3
     """
     try:
       end = 0
+      start = end
+      end += 1
+      (self.color,) = _get_struct_b().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -164,3 +175,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_b = None
+def _get_struct_b():
+    global _struct_b
+    if _struct_b is None:
+        _struct_b = struct.Struct("<b")
+    return _struct_b

@@ -1,0 +1,6 @@
+增加一个新工件需要修改的地方
+//1-red 2-green 3-purple 4-orange 5-yellow 6-blue
+TFcamtorobot.cpp
+
+DobotClient_PTP.cpp
+

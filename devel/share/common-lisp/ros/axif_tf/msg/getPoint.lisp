@@ -7,7 +7,12 @@
 ;//! \htmlinclude getPoint.msg.html
 
 (cl:defclass <getPoint> (roslisp-msg-protocol:ros-message)
-  ((x1
+  ((color
+    :reader color
+    :initarg :color
+    :type cl:fixnum
+    :initform 0)
+   (x1
     :reader x1
     :initarg :x1
     :type (cl:vector cl:float)
@@ -32,6 +37,11 @@
   (cl:unless (cl:typep m 'getPoint)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name axif_tf-msg:<getPoint> is deprecated: use axif_tf-msg:getPoint instead.")))
 
+(cl:ensure-generic-function 'color-val :lambda-list '(m))
+(cl:defmethod color-val ((m <getPoint>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader axif_tf-msg:color-val is deprecated.  Use axif_tf-msg:color instead.")
+  (color m))
+
 (cl:ensure-generic-function 'x1-val :lambda-list '(m))
 (cl:defmethod x1-val ((m <getPoint>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader axif_tf-msg:x1-val is deprecated.  Use axif_tf-msg:x1 instead.")
@@ -48,6 +58,9 @@
   (x3 m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <getPoint>) ostream)
   "Serializes a message object of type '<getPoint>"
+  (cl:let* ((signed (cl:slot-value msg 'color)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 256) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    )
   (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'x1))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
@@ -84,6 +97,9 @@
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <getPoint>) istream)
   "Deserializes a message object of type '<getPoint>"
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'color) (cl:if (cl:< unsigned 128) unsigned (cl:- unsigned 256))))
   (cl:let ((__ros_arr_len 0))
     (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
@@ -136,18 +152,19 @@
   "axif_tf/getPoint")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<getPoint>)))
   "Returns md5sum for a message object of type '<getPoint>"
-  "4416512988bf8bb5f533b3277759fe81")
+  "fe1886e8d1150193eacc1fadec6d92ff")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'getPoint)))
   "Returns md5sum for a message object of type 'getPoint"
-  "4416512988bf8bb5f533b3277759fe81")
+  "fe1886e8d1150193eacc1fadec6d92ff")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<getPoint>)))
   "Returns full string definition for message of type '<getPoint>"
-  (cl:format cl:nil "float32[] x1~%float32[] x2~%float32[] x3~%~%~%"))
+  (cl:format cl:nil "int8      color~%float32[] x1~%float32[] x2~%float32[] x3~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'getPoint)))
   "Returns full string definition for message of type 'getPoint"
-  (cl:format cl:nil "float32[] x1~%float32[] x2~%float32[] x3~%~%~%"))
+  (cl:format cl:nil "int8      color~%float32[] x1~%float32[] x2~%float32[] x3~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <getPoint>))
   (cl:+ 0
+     1
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'x1) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'x2) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'x3) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
@@ -155,6 +172,7 @@
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <getPoint>))
   "Converts a ROS message object to a list"
   (cl:list 'getPoint
+    (cl:cons ':color (color msg))
     (cl:cons ':x1 (x1 msg))
     (cl:cons ':x2 (x2 msg))
     (cl:cons ':x3 (x3 msg))

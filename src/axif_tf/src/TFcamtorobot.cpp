@@ -30,7 +30,6 @@
 /**************************************计算过程中用到的变量
 ***************************************************/
 using namespace std;
-axif_tf::getPoint msg1;                             //自定义 msg 存储的是红色木块中心的像素坐标
 Eigen::Matrix<double, 4, 3> *pointer_camera_matrix; //相机内参*Zc
 ros::NodeHandle *n_p = NULL;
 
@@ -54,8 +53,7 @@ Eigen::Matrix<double, 4, 3> camera_matrix_Zc;
 //齐次像素坐标初始化,用来储存接收到的木块中心像素
 Eigen::Vector3d pixel_vec(1.0, 1.0, 1.0);
 Eigen::Vector3d pixel_vec_transpose(1.0, 1.0, 1.0);
-//中心点在相机坐标系下的坐标计算结果
-Eigen::Vector4d result_1;
+
 //世界坐标系下的坐标
 /**********************************************TF 变量
 ******************************************************/
@@ -84,16 +82,21 @@ ros::Publisher *pointer_result_5_pub = NULL; //黄色
 ros::Publisher *pointer_result_6_pub = NULL; //蓝色
 
 
+//中心点在相机坐标系下的坐标计算结果
+Eigen::Vector4d result_1; //red
+Eigen::Vector4d result_2; //green
+Eigen::Vector4d result_3; //purple
+Eigen::Vector4d result_4; //orange
+Eigen::Vector4d result_5; //yellow
+Eigen::Vector4d result_6; //blue
 
 
 
+string RED="red";
 
 
-
-
-
-
-
+axif_tf::getPoint msg1;                             //自定义 msg 存储的是红色木块中心的像素坐标
+axif_tf::getPoint msg2;                             //自定义 msg 存储的是红色木块中心的像素坐标
 
 /********************************************************************/
 /********************************************************************/
@@ -129,11 +132,14 @@ int main(int argc, char **argv)
     //订阅机器人末端的姿态
     image_transport::ImageTransport it_(n);
     image_transport::Subscriber image_sub_ = it_.subscribe("/usb_cam/image_raw", 1, callbackImage);
+
     //发布相机坐标系下的红色物块中心坐标
     ros::Publisher result_1_pub = n.advertise<axif_tf::getPoint>("result_1", 1000);
     //取地址发布
     pointer_result_1_pub = &result_1_pub;
-    ros::Subscriber pixel_sub = n.subscribe("pixel_center_axis", 100, callbackCalculateAxis); //订阅木块中心的像素坐标
+
+    ros::Subscriber pixel_sub1 = n.subscribe("pixel_center_axis", 100, callbackCalculateAxis); //订阅木块中心的像素坐标
+
     //每秒接受 30 次回调函数
     ros::Rate loop_rate(30);
     while (ros::ok())
@@ -176,13 +182,143 @@ void callbackCalculateAxis(opencvtest::pixel_point0::ConstPtr message)
             msg1.x1.push_back(result_1[0]);
             msg1.x2.push_back(result_1[1]);
             msg1.x3.push_back(result_1[2]);
+            msg1.color = 1;
         }
     }
     cout << "红色工件坐标："<<result_1[0]<<" "<<result_1[1]<<" "<<result_1[2] << endl;
     pointer_result_1_pub->publish(msg1); //发布出来
+    result_1[0] = 0;
+    result_1[1] = 0;
+    result_1[2] = 0;
     msg1.x1.clear();
     msg1.x2.clear();
     msg1.x3.clear();
+    msg1.color = 0;
+
+    //处理绿色工件
+    for (int i = 0; i < message->green_u.size(); i++)
+    {
+        if ((pixel_vec[0] != message->green_u[i]) || (pixel_vec[1] != message->green_v[i]))
+        {
+            pixel_vec[0] = message->green_u[i];
+            pixel_vec[1] = message->green_v[i];
+            pixel_vec_transpose = pixel_vec.transpose();
+            result_2 = camera_matrix_Zc * pixel_vec_transpose;
+            msg1.x1.push_back(result_2[0]);
+            msg1.x2.push_back(result_2[1]);
+            msg1.x3.push_back(result_2[2]);
+            msg1.color = 2;
+        }
+    }
+    cout << "绿色工件坐标："<<result_2[0]<<" "<<result_2[1]<<" "<<result_2[2] << endl;
+    pointer_result_1_pub->publish(msg1); //发布出来
+    result_2[0] = 0;
+    result_2[1] = 0;
+    result_2[2] = 0;
+    msg1.x1.clear();
+    msg1.x2.clear();
+    msg1.x3.clear();
+    msg1.color = 0;
+
+    //处理紫色工件
+    for (int i = 0; i < message->purple_u.size(); i++)
+    {
+        if ((pixel_vec[0] != message->purple_u[i]) || (pixel_vec[1] != message->purple_v[i]))
+        {
+            pixel_vec[0] = message->purple_u[i];
+            pixel_vec[1] = message->purple_v[i];
+            pixel_vec_transpose = pixel_vec.transpose();
+            result_3 = camera_matrix_Zc * pixel_vec_transpose;
+            msg1.x1.push_back(result_3[0]);
+            msg1.x2.push_back(result_3[1]);
+            msg1.x3.push_back(result_3[2]);
+            msg1.color = 3;
+        }
+    }
+    cout << "紫色工件坐标："<<result_3[0]<<" "<<result_3[1]<<" "<<result_3[2] << endl;
+    pointer_result_1_pub->publish(msg1); //发布出来
+    result_3[0] = 0;
+    result_3[1] = 0;
+    result_3[2] = 0;
+    msg1.x1.clear();
+    msg1.x2.clear();
+    msg1.x3.clear();
+    msg1.color = 0;
+
+    //处理橙色工件
+    for (int i = 0; i < message->orange_u.size(); i++)
+    {
+        if ((pixel_vec[0] != message->orange_u[i]) || (pixel_vec[1] != message->orange_v[i]))
+        {
+            pixel_vec[0] = message->orange_u[i];
+            pixel_vec[1] = message->orange_v[i];
+            pixel_vec_transpose = pixel_vec.transpose();
+            result_4 = camera_matrix_Zc * pixel_vec_transpose;
+            msg1.x1.push_back(result_4[0]);
+            msg1.x2.push_back(result_4[1]);
+            msg1.x3.push_back(result_4[2]);
+            msg1.color = 4;
+        }
+    }
+    cout << "橙色工件坐标："<<result_4[0]<<" "<<result_4[1]<<" "<<result_4[2] << endl;
+    pointer_result_1_pub->publish(msg1); //发布出来
+    result_4[0] = 0;
+    result_4[1] = 0;
+    result_4[2] = 0;
+    msg1.x1.clear();
+    msg1.x2.clear();
+    msg1.x3.clear();
+    msg1.color = 0;
+
+    //处理黄色工件
+    for (int i = 0; i < message->yellow_u.size(); i++)
+    {
+        if ((pixel_vec[0] != message->yellow_u[i]) || (pixel_vec[1] != message->yellow_v[i]))
+        {
+            pixel_vec[0] = message->yellow_u[i];
+            pixel_vec[1] = message->yellow_v[i];
+            pixel_vec_transpose = pixel_vec.transpose();
+            result_5 = camera_matrix_Zc * pixel_vec_transpose;
+            msg1.x1.push_back(result_5[0]);
+            msg1.x2.push_back(result_5[1]);
+            msg1.x3.push_back(result_5[2]);
+            msg1.color = 5;
+        }
+    }
+    cout << "黄色工件坐标："<<result_5[0]<<" "<<result_5[1]<<" "<<result_5[2] << endl;
+    pointer_result_1_pub->publish(msg1); //发布出来
+    result_5[0] = 0;
+    result_5[1] = 0;
+    result_5[2] = 0;
+    msg1.x1.clear();
+    msg1.x2.clear();
+    msg1.x3.clear();
+    msg1.color = 0;
+
+    //处理蓝色工件
+    for (int i = 0; i < message->blue_u.size(); i++)
+    {
+        if ((pixel_vec[0] != message->blue_u[i]) || (pixel_vec[1] != message->blue_v[i]))
+        {
+            pixel_vec[0] = message->blue_u[i];
+            pixel_vec[1] = message->blue_v[i];
+            pixel_vec_transpose = pixel_vec.transpose();
+            result_6 = camera_matrix_Zc * pixel_vec_transpose;
+            msg1.x1.push_back(result_6[0]);
+            msg1.x2.push_back(result_6[1]);
+            msg1.x3.push_back(result_6[2]);
+            msg1.color = 6;
+        }
+    }
+    cout << "蓝色工件坐标："<<result_6[0]<<" "<<result_6[1]<<" "<<result_6[2] << endl;
+    pointer_result_1_pub->publish(msg1); //发布出来
+    result_6[0] = 0;
+    result_6[1] = 0;
+    result_6[2] = 0;
+    msg1.x1.clear();
+    msg1.x2.clear();
+    msg1.x3.clear();
+    msg1.color = 0;
 }
 //接受传来的图像,目的是为了检测二维码,并发布世界坐标系,相机坐标系,机器人坐标系,机器人末端坐标系的 tf 变换关系
 void callbackImage(const sensor_msgs::ImageConstPtr &msg)

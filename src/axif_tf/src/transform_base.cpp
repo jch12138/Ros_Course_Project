@@ -29,27 +29,31 @@
 //#include <dobot/mypose.h>
 #include <dobot/GetPose.h>
 using namespace std;
-axif_tf::getPoint msg10; //存储物块在机械臂基座坐标系下的中心坐标
-void callbackCalculateAxis1(axif_tf::getPoint::ConstPtr message);
+
 ros::NodeHandle *n_p = NULL;
-ros::Publisher *pointer_result_10_pub = NULL;
+
 geometry_msgs::PointStamped result_in;
 geometry_msgs::PointStamped result_out;
 
-//红
-tf::TransformListener* listener_ptr;
+/* 添加红色工件 */
+tf::TransformListener *listener_ptr;
+axif_tf::getPoint msg10; //存储物块在机械臂基座坐标系下的中心坐标
+ros::Publisher *pointer_result_10_pub = NULL;
+void callbackCalculateAxis1(axif_tf::getPoint::ConstPtr message);
 
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "transform_base");
     ros::NodeHandle n;
     n_p = &n;
+
+    /* 红色 */
     tf::TransformListener listener;
     listener_ptr = &listener;
-    ros::Subscriber pixel_sub1 =
-    n.subscribe("result_1", 100, callbackCalculateAxis1);
-    ros::Publisher result_1_pub = n.advertise<axif_tf::getPoint>("result_10",1); //发布相机坐标系下的红色物块中心坐标
+    ros::Subscriber pixel_sub = n.subscribe("result_1", 100, callbackCalculateAxis1);
+    ros::Publisher result_1_pub = n.advertise<axif_tf::getPoint>("result_10", 1); //发布相机坐标系下的红色物块中心坐标
     pointer_result_10_pub = &result_1_pub;
+
     ros::Rate loop_rate(30);
     while (ros::ok())
     {
@@ -77,14 +81,61 @@ void callbackCalculateAxis1(axif_tf::getPoint::ConstPtr message)
             ros::Duration(1.0).sleep();
             continue;
         }
-        msg10.x1.push_back(result_out.point.x + 0.004);
-        msg10.x2.push_back(result_out.point.y);
-        msg10.x3.push_back(-0.040);
+
+        msg10.color = message->color;
+
+        if (msg10.color == 1)
+        /* red */
+        {
+            cout << "red" << endl;
+            msg10.x1.push_back(result_out.point.x + 0.004);
+            msg10.x2.push_back(result_out.point.y);
+            msg10.x3.push_back(-0.040);
+        }
+        if (msg10.color == 2)
+        /* green */
+        {
+            cout << "green" << endl;
+            msg10.x1.push_back(result_out.point.x + 0.004);
+            msg10.x2.push_back(result_out.point.y - 0.001);
+            msg10.x3.push_back(-0.040);
+        }
+        if (msg10.color == 3)
+        /* purple */
+        {
+            cout << "purple" << endl;
+            msg10.x1.push_back(result_out.point.x + 0.004);
+            msg10.x2.push_back(result_out.point.y);
+            msg10.x3.push_back(-0.040);
+        }
+        if (msg10.color == 4)
+        /* orange */
+        {
+            cout << "orange" << endl;
+            msg10.x1.push_back(result_out.point.x + 0.004);
+            msg10.x2.push_back(result_out.point.y);
+            msg10.x3.push_back(-0.040);
+        }
+        if (msg10.color == 5)
+        /* yellow */
+        {
+            cout << "yellow" << endl;
+            msg10.x1.push_back(result_out.point.x + 0.004);
+            msg10.x2.push_back(result_out.point.y);
+            msg10.x3.push_back(-0.040);
+        }
+        if (msg10.color == 6)
+        /* blue */
+        {
+            cout << "blue" << endl;
+            msg10.x1.push_back(result_out.point.x + 0.004);
+            msg10.x2.push_back(result_out.point.y);
+            msg10.x3.push_back(-0.040);
+        }
+        pointer_result_10_pub->publish(msg10); //发布出来
+        msg10.x1.clear();
+        msg10.x2.clear();
+        msg10.x3.clear();
+        msg10.color = 0;
     }
-    cout << "red" << endl;
-    cout << msg10 << endl;
-    pointer_result_10_pub->publish(msg10); //发布出来
-    msg10.x1.clear();
-    msg10.x2.clear();
-    msg10.x3.clear();
 }

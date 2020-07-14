@@ -18,11 +18,18 @@ class getPoint {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
+      this.color = null;
       this.x1 = null;
       this.x2 = null;
       this.x3 = null;
     }
     else {
+      if (initObj.hasOwnProperty('color')) {
+        this.color = initObj.color
+      }
+      else {
+        this.color = 0;
+      }
       if (initObj.hasOwnProperty('x1')) {
         this.x1 = initObj.x1
       }
@@ -46,6 +53,8 @@ class getPoint {
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type getPoint
+    // Serialize message field [color]
+    bufferOffset = _serializer.int8(obj.color, buffer, bufferOffset);
     // Serialize message field [x1]
     bufferOffset = _arraySerializer.float32(obj.x1, buffer, bufferOffset, null);
     // Serialize message field [x2]
@@ -59,6 +68,8 @@ class getPoint {
     //deserializes a message object of type getPoint
     let len;
     let data = new getPoint(null);
+    // Deserialize message field [color]
+    data.color = _deserializer.int8(buffer, bufferOffset);
     // Deserialize message field [x1]
     data.x1 = _arrayDeserializer.float32(buffer, bufferOffset, null)
     // Deserialize message field [x2]
@@ -73,7 +84,7 @@ class getPoint {
     length += 4 * object.x1.length;
     length += 4 * object.x2.length;
     length += 4 * object.x3.length;
-    return length + 12;
+    return length + 13;
   }
 
   static datatype() {
@@ -83,16 +94,16 @@ class getPoint {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '4416512988bf8bb5f533b3277759fe81';
+    return 'fe1886e8d1150193eacc1fadec6d92ff';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
+    int8      color
     float32[] x1
     float32[] x2
     float32[] x3
-    
     `;
   }
 
@@ -102,6 +113,13 @@ class getPoint {
       msg = {};
     }
     const resolved = new getPoint(null);
+    if (msg.color !== undefined) {
+      resolved.color = msg.color;
+    }
+    else {
+      resolved.color = 0
+    }
+
     if (msg.x1 !== undefined) {
       resolved.x1 = msg.x1;
     }

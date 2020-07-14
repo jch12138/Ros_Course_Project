@@ -14,20 +14,25 @@
 
 (defclass axif_tf::getPoint
   :super ros::object
-  :slots (_x1 _x2 _x3 ))
+  :slots (_color _x1 _x2 _x3 ))
 
 (defmethod axif_tf::getPoint
   (:init
    (&key
+    ((:color __color) 0)
     ((:x1 __x1) (make-array 0 :initial-element 0.0 :element-type :float))
     ((:x2 __x2) (make-array 0 :initial-element 0.0 :element-type :float))
     ((:x3 __x3) (make-array 0 :initial-element 0.0 :element-type :float))
     )
    (send-super :init)
+   (setq _color (round __color))
    (setq _x1 __x1)
    (setq _x2 __x2)
    (setq _x3 __x3)
    self)
+  (:color
+   (&optional __color)
+   (if __color (setq _color __color)) _color)
   (:x1
    (&optional __x1)
    (if __x1 (setq _x1 __x1)) _x1)
@@ -40,6 +45,8 @@
   (:serialization-length
    ()
    (+
+    ;; int8 _color
+    1
     ;; float32[] _x1
     (* 4    (length _x1)) 4
     ;; float32[] _x2
@@ -51,6 +58,8 @@
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
+     ;; int8 _color
+       (write-byte _color s)
      ;; float32[] _x1
      (write-long (length _x1) s)
      (dotimes (i (length _x1))
@@ -70,6 +79,9 @@
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
+   ;; int8 _color
+     (setq _color (sys::peek buf ptr- :char)) (incf ptr- 1)
+     (if (> _color 127) (setq _color (- _color 256)))
    ;; float32[] _x1
    (let (n)
      (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
@@ -95,17 +107,17 @@
    self)
   )
 
-(setf (get axif_tf::getPoint :md5sum-) "4416512988bf8bb5f533b3277759fe81")
+(setf (get axif_tf::getPoint :md5sum-) "fe1886e8d1150193eacc1fadec6d92ff")
 (setf (get axif_tf::getPoint :datatype-) "axif_tf/getPoint")
 (setf (get axif_tf::getPoint :definition-)
-      "float32[] x1
+      "int8      color
+float32[] x1
 float32[] x2
 float32[] x3
-
 ")
 
 
 
-(provide :axif_tf/getPoint "4416512988bf8bb5f533b3277759fe81")
+(provide :axif_tf/getPoint "fe1886e8d1150193eacc1fadec6d92ff")
 
 

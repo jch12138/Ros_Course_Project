@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/devel/lib/axif_tf/TFcamtorobot",
+            "program": "${workspaceFolder}/devel/lib/axif_tf/transform_base",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

@@ -24,18 +24,23 @@ struct getPoint_
   typedef getPoint_<ContainerAllocator> Type;
 
   getPoint_()
-    : x1()
+    : color(0)
+    , x1()
     , x2()
     , x3()  {
     }
   getPoint_(const ContainerAllocator& _alloc)
-    : x1(_alloc)
+    : color(0)
+    , x1(_alloc)
     , x2(_alloc)
     , x3(_alloc)  {
   (void)_alloc;
     }
 
 
+
+   typedef int8_t _color_type;
+  _color_type color;
 
    typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _x1_type;
   _x1_type x1;
@@ -124,12 +129,12 @@ struct MD5Sum< ::axif_tf::getPoint_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "4416512988bf8bb5f533b3277759fe81";
+    return "fe1886e8d1150193eacc1fadec6d92ff";
   }
 
   static const char* value(const ::axif_tf::getPoint_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x4416512988bf8bb5ULL;
-  static const uint64_t static_value2 = 0xf533b3277759fe81ULL;
+  static const uint64_t static_value1 = 0xfe1886e8d1150193ULL;
+  static const uint64_t static_value2 = 0xeacc1fadec6d92ffULL;
 };
 
 template<class ContainerAllocator>
@@ -148,7 +153,8 @@ struct Definition< ::axif_tf::getPoint_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "float32[] x1\n\
+    return "int8      color\n\
+float32[] x1\n\
 float32[] x2\n\
 float32[] x3\n\
 ";
@@ -169,6 +175,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.color);
       stream.next(m.x1);
       stream.next(m.x2);
       stream.next(m.x3);
@@ -190,6 +197,8 @@ struct Printer< ::axif_tf::getPoint_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::axif_tf::getPoint_<ContainerAllocator>& v)
   {
+    s << indent << "color: ";
+    Printer<int8_t>::stream(s, indent + "  ", v.color);
     s << indent << "x1[]" << std::endl;
     for (size_t i = 0; i < v.x1.size(); ++i)
     {

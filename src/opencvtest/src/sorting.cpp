@@ -10,11 +10,11 @@
 #include <iostream>
 using namespace std;
 
-vector<int> hsvorange =     {1,     15,     25,     43,     255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
+vector<int> hsvorange =     {1,     10,     25,     43,     255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
 vector<int> hsvpurple =     {2,     130,    160,    43,     255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
 vector<int> hsvgreen =      {3,     40,     80,      43,    255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
 vector<int> hsvyellow =     {4,     30,     40,     43,     255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
-vector<int> hsvred =        {5,     5,      25,     43,     255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
+vector<int> hsvred =        {5,     0,      10,     43,     255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
 vector<int> hsvblue =       {6,     90,     130,     43,    255, 45, 255}; //预设颜色的 HSV 三通道范围,其中 0 号元素作颜色序号,用来标识各种颜色,可按照自己需求和颜色表自由添加
 
 static const string OPENCV_WINDOW = "color _distinguish";
@@ -93,7 +93,7 @@ public:
         //中值滤波操作
         cv::medianBlur(binary, binary, 25);
         //轮廓的查找,只提取最外面的轮廓,将轮廓中的所有点的编码转换成点
-        cv::findContours(clone, color.getContours(), hierarcy, CV_RETR_EXTERNAL,
+        cv::findContours(binary, color.getContours(), hierarcy, CV_RETR_EXTERNAL,
                          CV_CHAIN_APPROX_NONE);
         if (color.getContours().size() == 0)
             return;
@@ -101,7 +101,7 @@ public:
         for (int i = 0; i < color.getContours().size(); i++)
         {
             rect.push_back(cv::boundingRect(color.getContours()[i]));
-            if (rect[i].area() > 6000 && rect[i].area() < 15000)
+            if (rect[i].area() > 5000 && rect[i].area() < 13000)
             //根据实际情况调整范围,只有满足规定大小范围内的矩形才能被判断为物块
             //图像最外边界, 即用于筛选
             {

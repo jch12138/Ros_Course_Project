@@ -35,9 +35,11 @@
 #include <cmath>
 
 using namespace std;
-ros::NodeHandle *n_p = NULL;
+
+
 //红色工件运动程序
 void MOVE_rtr(axif_tf::getPoint::ConstPtr message);
+
 
 int main(int argc, char **argv)
 {
@@ -116,6 +118,7 @@ int main(int argc, char **argv)
         srv.request.rVelocity = 100;
         srv.request.rAcceleration = 100;
         client.call(srv);
+        
     } while (0);
 
     // Set PTP jump parameters
@@ -124,9 +127,10 @@ int main(int argc, char **argv)
         client = n.serviceClient<dobot::SetPTPJumpParams>("/DobotServer/SetPTPJumpParams");
         dobot::SetPTPJumpParams srv;
 
-        srv.request.jumpHeight = 20;
+        srv.request.jumpHeight = 40;
         srv.request.zLimit = 200;
         client.call(srv);
+
     } while (0);
 
     // Set PTP common parameters
@@ -144,59 +148,24 @@ int main(int argc, char **argv)
     dobot::SetPTPCmd srv;
 
     /* 添加的内容 */
-    ros::Subscriber pixel_sub1 = n.subscribe("result_10", 1, MOVE_rtr);
+    ros::Subscriber pixel_sub1 = n.subscribe("result_10", 1, MOVE_rtr); //red
 
     ros::Rate loop_rate(10);
     while (ros::ok())
     {
         ros::spinOnce();
         loop_rate.sleep();
-        // // The first point
-        // do {
-        //     srv.request.ptpMode = 1;
-        //     srv.request.x = 200;
-        //     srv.request.y = 0;
-        //     srv.request.z = 0;
-        //     srv.request.r = 0;
-        //     client.call(srv);
-        //     if (srv.response.result == 0) {
-        //         break;
-        //     }
-        //     ros::spinOnce();
-        //     if (ros::ok() == false) {
-        //         break;
-        //     }
-        // } while (1);
 
-        // // The first point
-        // do {
-        //     srv.request.ptpMode = 1;
-        //     srv.request.x = 250;
-        //     srv.request.y = 0;
-        //     srv.request.z = 0;
-        //     srv.request.r = 0;
-        //     client.call(srv);
-        //     if (srv.response.result == 0) {
-        //         break;
-        //     }
-        //     ros::spinOnce();
-        //     if (ros::ok() == false) {
-        //         break;
-        //     }
-        // } while (1);
-
-        // ros::spinOnce();
     }
 
     return 0;
 }
 
-
-
 void MOVE_rtr(axif_tf::getPoint::ConstPtr message)
 {
-
+    
     int souce = 200;
+    ros::NodeHandle *n_p = NULL;
     //初始位置
     int j = message->x1.size();
     vector<Eigen::Vector3d> temp;
@@ -221,7 +190,30 @@ void MOVE_rtr(axif_tf::getPoint::ConstPtr message)
 
     for (int i = 0; i < j; i++)
     {
-        cout << "等待:红色物块分类中第" << i << "块" << endl;
+        if(message->color == 1)
+        {
+            cout << "正在移动红色工件" << endl;
+        }
+        if(message->color == 2)
+        {
+            cout << "正在移动绿色工件" << endl;
+        }
+        if(message->color == 3)
+        {
+            cout << "正在移动紫色工件" << endl;
+        }
+        if(message->color == 4)
+        {
+            cout << "正在移动橙色工件" << endl;
+        }
+        if(message->color == 5)
+        {
+            cout << "正在移动黄色工件" << endl;
+        }
+        if(message->color == 6)
+        {
+            cout << "正在移动蓝色工件" << endl;
+        }       
         srv_m.request.x = temp[i][0] * 1000;
         srv_m.request.y = temp[i][1] * 1000;
         srv_m.request.z = temp[i][2] * 1000;

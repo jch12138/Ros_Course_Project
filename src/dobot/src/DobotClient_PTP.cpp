@@ -35,6 +35,7 @@
 #include <cmath>
 
 using namespace std;
+ros::NodeHandle *n_p = NULL;
 //红色工件运动程序
 void MOVE_rtr(axif_tf::getPoint::ConstPtr message);
 
@@ -190,6 +191,8 @@ int main(int argc, char **argv)
     return 0;
 }
 
+
+
 void MOVE_rtr(axif_tf::getPoint::ConstPtr message)
 {
 
@@ -197,7 +200,8 @@ void MOVE_rtr(axif_tf::getPoint::ConstPtr message)
     //初始位置
     int j = message->x1.size();
     vector<Eigen::Vector3d> temp;
-    ros::NodeHandle *n_p;
+    ros::NodeHandle n;
+    n_p = &n;
     ros::ServiceClient client_suck = n_p->serviceClient<dobot::SetEndEffectorSuctionCup>("/DobotServer/SetEndEffectorSuctionCup");
     dobot::SetEndEffectorSuctionCup srv_s;
     ros::ServiceClient client_mov = n_p->serviceClient<dobot::SetPTPCmd>("/DobotServer/SetPTPCmd");

@@ -33,9 +33,9 @@ using namespace std;
 axif_tf::getPoint msg1;                             //自定义 msg 存储的是红色木块中心的像素坐标
 Eigen::Matrix<double, 4, 3> *pointer_camera_matrix; //相机内参*Zc
 ros::NodeHandle *n_p = NULL;
-ros::Publisher *pointer_result_1_pub = NULL; //红色
+
 //tf::TransformListener* listener_ptr;
-double Zc = 1.0;                       //坐标变换因子(相机坐标系原点到世界坐标平面的距离)
+double Zc = 0.44;                       //坐标变换因子(相机坐标系原点到世界坐标平面的距离)
 const string camera_name = "logitech"; //相机坐标系的名称
 //手动输入标定好的相机内参
 cv::Mat camera_matrix = (cv::Mat_<double>(3, 3) << 900.9729342762695, 0, 321.4910631445854, 0, 896.8592578488483, 214.808228698595, 0, 0, 1);
@@ -73,6 +73,28 @@ void getMarker(cv::Mat &marker_image, vector<cv::Point2f> &marker_center, bool k
 void sendMarkerTf(vector<cv::Vec3d> &marker_vecs, vector<cv::Vec3d> &marker_rvecs);
 void sendDobotTf();
 void sendDobotEffectorTF();
+
+
+/* 新增工件 */
+ros::Publisher *pointer_result_1_pub = NULL; //红色
+ros::Publisher *pointer_result_2_pub = NULL; //绿色
+ros::Publisher *pointer_result_3_pub = NULL; //紫色
+ros::Publisher *pointer_result_4_pub = NULL; //橙色
+ros::Publisher *pointer_result_5_pub = NULL; //黄色
+ros::Publisher *pointer_result_6_pub = NULL; //蓝色
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********************************************************************/
 /********************************************************************/
 /******************************主函数*********************************/
@@ -127,10 +149,9 @@ void callbackCalculateAxis(opencvtest::pixel_point0::ConstPtr message)
     Eigen::Matrix< double, 3, 3 > camera_matrix_Zc_inver;
     Eigen::Matrix< double, 4, 3 > camera_matrix_Zc;
 
-    camera_matrix_Zc_temp<< 900.9729342762695, 0, 321.4910631445854, 
-                            0, 896.8592578488483, 214.808228698595, 
-                            0, 0, 1;
+    camera_matrix_Zc_temp<< 900.9729342762695, 0, 321.4910631445854, 0, 896.8592578488483, 214.808228698595, 0, 0, 1;
 
+    camera_matrix_Zc_inver= camera_matrix_Zc_temp.inverse();
     //Zc 更新,所以刷新赋值
     camera_matrix_Zc(0, 0) = camera_matrix_Zc_inver(0, 0) * Zc;
     camera_matrix_Zc(0, 1) = camera_matrix_Zc_inver(0, 1) * Zc;
@@ -147,7 +168,7 @@ void callbackCalculateAxis(opencvtest::pixel_point0::ConstPtr message)
         if ((pixel_vec[0] != message->red_u[i]) || (pixel_vec[1] != message->red_v[i]))
         {
             //计算公式
-            cout << "1" << endl;
+            //cout << "红色工件坐标" ;
             pixel_vec[0] = message->red_u[i];
             pixel_vec[1] = message->red_v[i];
             pixel_vec_transpose = pixel_vec.transpose();
@@ -157,7 +178,7 @@ void callbackCalculateAxis(opencvtest::pixel_point0::ConstPtr message)
             msg1.x3.push_back(result_1[2]);
         }
     }
-    cout << msg1 << endl;
+    cout << "红色工件坐标："<<result_1[0]<<" "<<result_1[1]<<" "<<result_1[2] << endl;
     pointer_result_1_pub->publish(msg1); //发布出来
     msg1.x1.clear();
     msg1.x2.clear();
@@ -202,7 +223,7 @@ void getMarker(cv::Mat &marker_image, vector<cv::Point2f> &marker_center, bool k
         {
             cv::aruco::drawAxis(marker_image, camera_matrix, dist_coeffs, rvecs, tvecs, 0.1); //画坐标轴
             Zc = tvecs[0][2] - 0.044;
-            cout << "深度输出:" << Zc << endl;
+            //cout << "深度输出:" << Zc << endl;
             sendMarkerTf(rvecs, tvecs); //发布 tf
         }
     }
@@ -261,11 +282,11 @@ void sendDobotTf()
     //发布世界参考坐标系和基座标系的坐标变换
     //需要补充
     //发布机器人末端坐标系和基座标系的变化关系
-    tf::Matrix3x3 tf_rotated_matrix(rotated_matrix.at<double>(0, 0), rotated_matrix.at<double>(0, 1), rotated_matrix.at<double>(0, 2),
-                                        rotated_matrix.at<double>(1, 0), rotated_matrix.at<double>(1, 1), rotated_matrix.at<double>(1, 2),
-                                        rotated_matrix.at<double>(2, 0), rotated_matrix.at<double>(2, 1), rotated_matrix.at<double>(2, 2));
+    tf::Matrix3x3 tf_rotated_matrix(1.0,0.0,0.0,
+                                    0.0,1.0,0.0,
+                                    0.0,0.0,1.0);
     //机器人基座坐标系与世界坐标系之间的平移向量
-    tf::Vector3 tf_tvecs(-0.125, 0.25, 0.138); //根据实际情况的测量值,机器人基座标系中心和世界坐标系中心的关系 0.258
+    tf::Vector3 tf_tvecs(-0.12, 0.253, 0.138); //根据实际情况的测量值,机器人基座标系中心和世界坐标系中心的关系 0.258
 
     tf::Transform transform(tf_rotated_matrix, tf_tvecs);
     pointer_dobot_base_bro->sendTransform(tf::StampedTransform(transform, ros::Time::now(), "world", "dobot_base"));
@@ -292,7 +313,7 @@ void sendDobotEffectorTF()
 
     dobot::GetPose srv;
     client_getpose.call(srv);
-    cout << srv.response.x / 1000 << "," << srv.response.y / 1000 << "," << srv.response.z / 1000 << endl;
+    //cout << srv.response.x / 1000 << "," << srv.response.y / 1000 << "," << srv.response.z / 1000 << endl;
     tf::Vector3 tf_tvecs(srv.response.x / 1000, srv.response.y / 1000, srv.response.z / 1000);
     tf::Transform transform(tf_rotated_matrix, tf_tvecs);
     pointer_dobot_effector_bra->sendTransform(tf::StampedTransform(transform, ros::Time::now(), "dobot_base", "dobot_effector"));

@@ -55,6 +55,11 @@
   "file": "/home/chenway/Documents/test/src/dobot/src/DobotClient_PTP.cpp"
 },
 {
+  "directory": "/home/chenway/Documents/test/build/dobot",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"dobot\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/chenway/Documents/test/src/dobot/src/DobotDll_x64  -g   -o CMakeFiles/DobotClient_P2P.dir/src/gohome.cpp.o -c /home/chenway/Documents/test/src/dobot/src/gohome.cpp",
+  "file": "/home/chenway/Documents/test/src/dobot/src/gohome.cpp"
+},
+{
   "directory": "/home/chenway/Documents/test/build/opencvtest",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"opencvtest\\\" -I/home/chenway/Documents/test/devel/include -I/opt/ros/kinetic/include -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -g   -std=c++11 -o CMakeFiles/sorting.dir/src/sorting.cpp.o -c /home/chenway/Documents/test/src/opencvtest/src/sorting.cpp",
   "file": "/home/chenway/Documents/test/src/opencvtest/src/sorting.cpp"

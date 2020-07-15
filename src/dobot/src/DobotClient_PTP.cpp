@@ -34,7 +34,19 @@
 #include <eigen3/Eigen/Geometry>
 #include <cmath>
 
+#include <iostream>
+
 using namespace std;
+ros::NodeHandle *n_p = NULL;
+
+int times = 0;
+
+float  pos[6][3] =  {{200, -75, -40},
+                                {200, -40, -40},
+                                {235, -75, -40},
+                                {235, -40, -40},
+                                {270, -75, -40},
+                                {270, -40, -40}};
 
 
 //红色工件运动程序
@@ -127,7 +139,7 @@ int main(int argc, char **argv)
         client = n.serviceClient<dobot::SetPTPJumpParams>("/DobotServer/SetPTPJumpParams");
         dobot::SetPTPJumpParams srv;
 
-        srv.request.jumpHeight = 40;
+        srv.request.jumpHeight = 20;
         srv.request.zLimit = 200;
         client.call(srv);
 
@@ -149,6 +161,11 @@ int main(int argc, char **argv)
 
     /* 添加的内容 */
     ros::Subscriber pixel_sub1 = n.subscribe("result_10", 1, MOVE_rtr); //red
+    ros::Subscriber pixel_sub2 = n.subscribe("result_20", 1, MOVE_rtr); //red
+    ros::Subscriber pixel_sub3 = n.subscribe("result_30", 1, MOVE_rtr); //red
+    ros::Subscriber pixel_sub4 = n.subscribe("result_40", 1, MOVE_rtr); //red
+    ros::Subscriber pixel_sub5 = n.subscribe("result_50", 1, MOVE_rtr); //red
+    ros::Subscriber pixel_sub6 = n.subscribe("result_60", 1, MOVE_rtr); //red
 
     ros::Rate loop_rate(10);
     while (ros::ok())
@@ -163,9 +180,8 @@ int main(int argc, char **argv)
 
 void MOVE_rtr(axif_tf::getPoint::ConstPtr message)
 {
+    //cout<<"message"<<message->x1<<message->x2<<message->x3<<endl;
     
-    int souce = 200;
-    ros::NodeHandle *n_p = NULL;
     //初始位置
     int j = message->x1.size();
     vector<Eigen::Vector3d> temp;
@@ -218,29 +234,46 @@ void MOVE_rtr(axif_tf::getPoint::ConstPtr message)
         srv_m.request.y = temp[i][1] * 1000;
         srv_m.request.z = temp[i][2] * 1000;
         srv_m.request.r = 0;
+        //std::cout<<"第一次移动"<<srv_m.request<<endl;
         client_mov.call(srv_m);
         sleep(6);
         //PTP 模式中起始点赋值
 
         srv_s.request.suck = 1;
         client_suck.call(srv_s);
-        sleep(2);
+        sleep(5);
         //吸盘吸取延时
 
-        srv_m.request.x = souce;
-        srv_m.request.y = -75;
-        srv_m.request.z = -40;
+        srv_m.request.x = temp[i][0] * 1000;
+        srv_m.request.y = temp[i][1] * 1000;
+        srv_m.request.z = temp[i][2] * 1000+40;
+        srv_m.request.r = 0;
+        //std::cout<<"第二次移动"<<srv_m.request<<endl;
+        client_mov.call(srv_m);
+        sleep(4);
+
+        srv_m.request.x = pos[message->color-1][0];
+        srv_m.request.y = pos[message->color-1][1];
+        srv_m.request.z = pos[message->color-1][2]+40;
         srv_m.request.r = 0;
         client_mov.call(srv_m);
-        sleep(6);
+        //std::cout<<"第三次移动"<<srv_m.request<<endl;
+        sleep(4);
+
+        srv_m.request.x = pos[message->color-1][0];
+        srv_m.request.y = pos[message->color-1][1];
+        srv_m.request.z = pos[message->color-1][2];
+        srv_m.request.r = 0;
+        client_mov.call(srv_m);
+        //std::cout<<"第四次移动"<<srv_m.request<<endl;
+        sleep(4);
+
         //PTP 模式中目标点赋值,单位 mm
 
         srv_s.request.suck = 0;
         client_suck.call(srv_s);
         sleep(2);
         //吸盘释放延时
-
-        souce += 50;
 
         if (ros::ok() == false)
         {

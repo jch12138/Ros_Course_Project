@@ -399,6 +399,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "dobot/CMakeFiles/dobot_gennodejs.dir/DependInfo.cmake"
   "dobot/CMakeFiles/DobotServer.dir/DependInfo.cmake"
   "dobot/CMakeFiles/DobotClient_PTP.dir/DependInfo.cmake"
+  "dobot/CMakeFiles/DobotClient_P2P.dir/DependInfo.cmake"
   "opencvtest/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "opencvtest/CMakeFiles/opencvtest_gencpp.dir/DependInfo.cmake"
   "opencvtest/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake"

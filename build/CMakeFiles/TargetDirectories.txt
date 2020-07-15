@@ -30,6 +30,7 @@
 /home/chenway/Documents/test/build/gtest/gtest/CMakeFiles/install/local.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/install.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/rebuild_cache.dir
+/home/chenway/Documents/test/build/dobot/CMakeFiles/install/strip.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMEParams.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStopExec.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir
@@ -129,7 +130,7 @@
 /home/chenway/Documents/test/build/dobot/CMakeFiles/dobot_gennodejs.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/DobotServer.dir
 /home/chenway/Documents/test/build/dobot/CMakeFiles/DobotClient_PTP.dir
-/home/chenway/Documents/test/build/dobot/CMakeFiles/install/strip.dir
+/home/chenway/Documents/test/build/dobot/CMakeFiles/DobotClient_P2P.dir
 /home/chenway/Documents/test/build/opencvtest/CMakeFiles/install.dir
 /home/chenway/Documents/test/build/opencvtest/CMakeFiles/rebuild_cache.dir
 /home/chenway/Documents/test/build/opencvtest/CMakeFiles/sensor_msgs_generate_messages_cpp.dir

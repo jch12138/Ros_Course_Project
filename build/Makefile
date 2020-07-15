@@ -1518,6 +1518,19 @@ DobotClient_PTP/fast:
 .PHONY : DobotClient_PTP/fast
 
 #=============================================================================
+# Target rules for targets named DobotClient_P2P
+
+# Build rule for target.
+DobotClient_P2P: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DobotClient_P2P
+.PHONY : DobotClient_P2P
+
+# fast build rule for target.
+DobotClient_P2P/fast:
+	$(MAKE) -f dobot/CMakeFiles/DobotClient_P2P.dir/build.make dobot/CMakeFiles/DobotClient_P2P.dir/build
+.PHONY : DobotClient_P2P/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -2596,6 +2609,7 @@ help:
 	@echo "... dobot_gennodejs"
 	@echo "... DobotServer"
 	@echo "... DobotClient_PTP"
+	@echo "... DobotClient_P2P"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... opencvtest_gencpp"
 	@echo "... sensor_msgs_generate_messages_py"

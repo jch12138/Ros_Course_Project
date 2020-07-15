@@ -79,6 +79,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,17 +132,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -1590,6 +1590,21 @@ DobotClient_PTP/fast:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_PTP.dir/build.make dobot/CMakeFiles/DobotClient_PTP.dir/build
 .PHONY : DobotClient_PTP/fast
 
+# Convenience name for target.
+dobot/CMakeFiles/DobotClient_P2P.dir/rule:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_P2P.dir/rule
+.PHONY : dobot/CMakeFiles/DobotClient_P2P.dir/rule
+
+# Convenience name for target.
+DobotClient_P2P: dobot/CMakeFiles/DobotClient_P2P.dir/rule
+
+.PHONY : DobotClient_P2P
+
+# fast build rule for target.
+DobotClient_P2P/fast:
+	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_P2P.dir/build.make dobot/CMakeFiles/DobotClient_P2P.dir/build
+.PHONY : DobotClient_P2P/fast
+
 src/DobotClient_JOG.o: src/DobotClient_JOG.cpp.o
 
 .PHONY : src/DobotClient_JOG.o
@@ -1678,6 +1693,7 @@ src/gohome.o: src/gohome.cpp.o
 # target to build an object file
 src/gohome.cpp.o:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/gohome.dir/build.make dobot/CMakeFiles/gohome.dir/src/gohome.cpp.o
+	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_P2P.dir/build.make dobot/CMakeFiles/DobotClient_P2P.dir/src/gohome.cpp.o
 .PHONY : src/gohome.cpp.o
 
 src/gohome.i: src/gohome.cpp.i
@@ -1687,6 +1703,7 @@ src/gohome.i: src/gohome.cpp.i
 # target to preprocess a source file
 src/gohome.cpp.i:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/gohome.dir/build.make dobot/CMakeFiles/gohome.dir/src/gohome.cpp.i
+	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_P2P.dir/build.make dobot/CMakeFiles/DobotClient_P2P.dir/src/gohome.cpp.i
 .PHONY : src/gohome.cpp.i
 
 src/gohome.s: src/gohome.cpp.s
@@ -1696,6 +1713,7 @@ src/gohome.s: src/gohome.cpp.s
 # target to generate assembly for a file
 src/gohome.cpp.s:
 	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/gohome.dir/build.make dobot/CMakeFiles/gohome.dir/src/gohome.cpp.s
+	cd /home/chenway/Documents/test/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_P2P.dir/build.make dobot/CMakeFiles/DobotClient_P2P.dir/src/gohome.cpp.s
 .PHONY : src/gohome.cpp.s
 
 # Help Target
@@ -1706,6 +1724,7 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... install/strip"
 	@echo "... _dobot_generate_messages_check_deps_SetHOMEParams"
 	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdStopExec"
 	@echo "... _dobot_generate_messages_check_deps_SetDeviceName"
@@ -1805,7 +1824,7 @@ help:
 	@echo "... dobot_gennodejs"
 	@echo "... DobotServer"
 	@echo "... DobotClient_PTP"
-	@echo "... install/strip"
+	@echo "... DobotClient_P2P"
 	@echo "... src/DobotClient_JOG.o"
 	@echo "... src/DobotClient_JOG.i"
 	@echo "... src/DobotClient_JOG.s"

@@ -307,3 +307,6 @@ add_dependencies(DobotClient_PTP dobot_gencpp)
 add_executable(gohome src/gohome.cpp)
 target_link_libraries(gohome ${catkin_LIBRARIES})
 add_dependencies(gohome dobot_gencpp)
+
+add_executable(DobotClient_P2P src/gohome.cpp)
+target_link_libraries(DobotClient_P2P ${catkin_LIBRARIES})
